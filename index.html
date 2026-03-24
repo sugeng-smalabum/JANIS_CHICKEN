@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#4a7c59">
+
+    <title>Janis Chicken - More Than Just Healthy & Delicious Culinary | Order Online Egypt</title>
+
+    <!-- SEO Meta Tags - Egypt -->
+    <meta name="description" content="Janis Chicken Egypt - Healthy high-protein grilled chicken, crispy chicken, mashed potato, and steamed vegetables. Low calorie, high protein, rich in fiber. Order now via WhatsApp in Egypt.">
+    <meta name="keywords" content="janis chicken egypt, healthy chicken cairo, grilled chicken egypt, mashed potato egypt, crispy chicken egypt, high protein food egypt, low calorie meal egypt, healthy food cairo, دجاج مشوي مصر, طعام صحي القاهرة">
+    <meta name="author" content="Janis Chicken">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://janischicken.com/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="en_EG">
+    <meta property="og:locale:alternate" content="ar_EG">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Janis Chicken - Healthy & Delicious Culinary Egypt">
+    <meta property="og:description" content="High protein grilled chicken, crispy chicken, mashed potato & steamed veggies. Low calorie, rich in fiber. Order now via WhatsApp!">
+    <meta property="og:url" content="https://janischicken.com/">
+    <meta property="og:site_name" content="Janis Chicken">
+    <meta property="og:image" content="https://janischicken.com/logo.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Janis Chicken - Healthy Culinary Egypt">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Janis Chicken - More Than Just Healthy & Delicious Culinary">
+    <meta name="twitter:description" content="High protein grilled chicken, mashed potato & steamed veggies. Healthy food in Egypt!">
+    <meta name="twitter:image" content="https://janischicken.com/logo.png">
+
+    <!-- Geo Tags Egypt -->
+    <meta name="geo.region" content="EG">
+    <meta name="geo.placename" content="Cairo, Egypt">
+    <meta name="geo.position" content="30.0444;31.2357">
+    <meta name="ICBM" content="30.0444, 31.2357">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#4a7c59">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Janis Chicken">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://wa.me">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD Egypt -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://janischicken.com/#organization",
+                "name": "Janis Chicken",
+                "description": "Janis Chicken Egypt - More than just healthy and delicious culinary. High protein grilled chicken, crispy chicken, mashed potato and steamed vegetables.",
+                "url": "https://janischicken.com/",
+                "telephone": "+20-100-000-0000",
+                "priceRange": "EGP 50 - EGP 300",
+                "servesCuisine": "Healthy Chicken",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cairo",
+                    "addressRegion": "Cairo Governorate",
+                    "addressCountry": "EG"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "30.0444",
+                    "longitude": "31.2357"
+                },
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                    "opens": "09:00",
+                    "closes": "22:00"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Egypt"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://janischicken.com/#website",
+                "url": "https://janischicken.com/",
+                "name": "Janis Chicken Egypt",
+                "description": "More than just healthy and delicious culinary in Egypt",
+                "inLanguage": ["en-EG", "ar-EG"]
+            },
+            {
+                "@type": "FoodEstablishment",
+                "@id": "https://janischicken.com/#foodestablishment",
+                "name": "Janis Chicken",
+                "servesCuisine": "Healthy Chicken, Mashed Potato, Steamed Vegetables",
+                "acceptsReservations": "False",
+                "priceRange": "EGP",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cairo",
+                    "addressCountry": "EG"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --green-primary: #4a7c59;
+            --green-dark: #2d5a3d;
+            --green-light: #6daa7f;
+            --green-pale: #e8f5ec;
+            --green-accent: #a8d5b5;
+            --gold: #c8a84b;
+            --white: #ffffff;
+            --off-white: #f7fdf9;
+            --text-dark: #1a2e22;
+        }
+
+        * { font-family: 'Nunito', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+
+        .hover-scale:hover { transform: translateY(-8px); }
+        .hover-scale { transition: all 0.3s ease; }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(74,124,89,0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(74,124,89,0.9)) drop-shadow(0 0 60px rgba(74,124,89,0.5)); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px) rotate(-10deg); }
+            to { opacity: 1; transform: translateX(0) rotate(0deg); }
+        }
+
+        .logo-container { animation: slideInLeft 1s ease-out, logoFloat 3s ease-in-out infinite 1s; }
+        .logo-container:hover { animation: logoFloat 0.6s ease-in-out infinite, logoGlow 2s ease-in-out infinite; }
+
+        @keyframes titleSlideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .title-animated { animation: titleSlideIn 1s ease-out 0.3s both; }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* WhatsApp Float */
+        @keyframes whatsappPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+        @keyframes whatsappBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; z-index: 100;
+            animation: slideInRight 0.5s ease-out, whatsappPulse 2s infinite;
+        }
+        .whatsapp-float:hover { animation: whatsappBounce 0.5s ease-in-out infinite; }
+        .whatsapp-button {
+            width: 65px; height: 65px; background: #25D366;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4); cursor: pointer; transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover { transform: scale(1.1); background: #20BA5A; }
+        .whatsapp-icon { width: 35px; height: 35px; fill: white; }
+        .whatsapp-tooltip {
+            position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
+            background: white; padding: 12px 20px; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); white-space: nowrap;
+            opacity: 0; pointer-events: none; transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; right: 85px; }
+        .whatsapp-tooltip::after {
+            content: ''; position: absolute; right: -8px; top: 50%; transform: translateY(-50%);
+            width: 0; height: 0; border-left: 8px solid white;
+            border-top: 8px solid transparent; border-bottom: 8px solid transparent;
+        }
+
+        /* Gallery Slider */
+        .gallery-slider {
+            position: relative; width: 100%; overflow: hidden;
+            background: linear-gradient(135deg, rgba(74,124,89,0.1) 0%, rgba(109,170,127,0.1) 100%);
+            border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .slider-container { display: flex; transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; }
+        .slide { min-width: 100%; position: relative; aspect-ratio: 16/9; background: #1a2e22; overflow: hidden; }
+        .slide img, .slide video { width: 100%; height: 100%; object-fit: cover; }
+        .slide-caption {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: white; padding: 2rem 1.5rem 1.5rem; font-weight: 700; font-size: 1.1rem;
+        }
+        .slider-arrow {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
+            width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 10; transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .slider-arrow:hover { background: white; transform: translateY(-50%) scale(1.1); }
+        .slider-arrow svg { width: 20px; height: 20px; stroke: #4a7c59; stroke-width: 2.5; }
+        .slider-arrow.prev { left: 15px; }
+        .slider-arrow.next { right: 15px; }
+        .slider-dots { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
+        .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s ease; }
+        .dot.active { background: white; transform: scale(1.3); }
+        .slider-counter {
+            position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5);
+            color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; z-index: 10;
+        }
+        .slider-control {
+            position: absolute; top: 15px; left: 15px;
+            background: rgba(0,0,0,0.5); color: white; border: none;
+            padding: 8px 12px; border-radius: 8px; cursor: pointer; z-index: 10;
+        }
+        .slider-control svg { width: 16px; height: 16px; stroke: white; stroke-width: 2; display: inline-block; vertical-align: middle; }
+        .slider-admin-btn {
+            position: absolute; top: 15px; left: 70px; z-index: 10;
+            background: rgba(74,124,89,0.8); color: white; border: none;
+            padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem;
+        }
+
+        /* Product Cards */
+        .product-card {
+            background: white; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 4px 20px rgba(74,124,89,0.1); transition: all 0.3s ease;
+            border: 2px solid var(--green-accent);
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(74,124,89,0.25); }
+
+        /* Hero gradient */
+        .hero-bg {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-primary) 50%, var(--green-light) 100%);
+        }
+
+        /* Green badges */
+        .green-badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Shipping section */
+        .shipping-bg {
+            background: linear-gradient(135deg, var(--green-pale) 0%, white 50%, var(--green-pale) 100%);
+        }
+
+        /* GPS Location Display */
+        #locationDisplay {
+            display: none;
+            background: var(--green-pale);
+            border: 2px solid var(--green-accent);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--green-pale); }
+        ::-webkit-scrollbar-thumb { background: var(--green-primary); border-radius: 4px; }
+
+        @media (max-width: 640px) {
+            .whatsapp-float { bottom: 20px; right: 20px; }
+            .whatsapp-button { width: 60px; height: 60px; }
+            .whatsapp-icon { width: 32px; height: 32px; }
+            .whatsapp-tooltip { display: none; }
+        }
+
+        /* Admin button */
+        #adminBtn {
+            position: fixed; bottom: 110px; right: 30px; z-index: 99;
+            background: var(--green-dark); color: white;
+            border: none; border-radius: 50%; width: 45px; height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; font-size: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #adminBtn:hover { transform: scale(1.1); background: var(--green-primary); }
+
+        .btn-green {
+            background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+            color: white;
+        }
+        .btn-green:hover {
+            background: linear-gradient(135deg, var(--green-dark), var(--green-primary));
+        }
+
+        /* Nutrition badges */
+        .nutrition-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--green-pale); border: 1.5px solid var(--green-accent);
+            color: var(--green-dark); border-radius: 20px;
+            padding: 4px 12px; font-size: 0.75rem; font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style="background-color: #f7fdf9;">
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-tooltip">
+            <p class="font-bold text-gray-800 text-sm">💬 Order via WhatsApp</p>
+            <p class="text-gray-500 text-xs">Tap to chat now!</p>
+        </div>
+        <div class="whatsapp-button" onclick="window.open('https://wa.me/201000000000?text=Hello%20Janis%20Chicken!%20I%20want%20to%20order.', '_blank')">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Admin Button -->
+    <button id="adminBtn" onclick="toggleAdmin()" title="Admin Panel">⚙️</button>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold" style="color: var(--green-dark);">Admin Login</h2>
+                <button onclick="closeAdminLogin()" class="text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            <input type="text" id="adminUsername" placeholder="Username" class="w-full px-4 py-3 border-2 rounded-lg mb-4" style="border-color: var(--green-accent);">
+            <input type="password" id="adminPassword" placeholder="Password" class="w-full px-4 py-3 border-2 rounded-lg mb-4" style="border-color: var(--green-accent);" onkeypress="if(event.key==='Enter') loginAdmin()">
+            <button onclick="loginAdmin()" class="w-full text-white py-3 rounded-lg font-semibold btn-green">Login</button>
+        </div>
+    </div>
+
+    <!-- Edit Business Info Modal -->
+    <div id="editInfoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--green-dark);">Edit Business Info</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Tagline</label>
+                    <input type="text" id="editTagline" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Rating</label>
+                    <input type="text" id="editRating" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Description</label>
+                    <textarea id="editDescription" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <button onclick="saveBusinessInfo()" class="flex-1 text-white py-3 rounded-lg font-semibold btn-green">Save</button>
+                <button onclick="closeEditInfo()" class="flex-1 bg-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-400">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full my-8">
+            <h2 id="productModalTitle" class="text-2xl font-bold mb-6" style="color: var(--green-dark);">Edit Product</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Product Name</label>
+                    <input type="text" id="productName" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Price (EGP)</label>
+                    <input type="number" id="productPrice" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Image URL</label>
+                    <input type="text" id="productImage" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Description</label>
+                    <textarea id="productDescription" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);" rows="3"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Category</label>
+                    <select id="productCategory" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                        <option value="signature">Signature Menu</option>
+                        <option value="sides">Side Dishes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <button onclick="saveProduct()" class="flex-1 text-white py-3 rounded-lg font-semibold btn-green">Save</button>
+                <button onclick="closeProductModal()" class="flex-1 bg-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-400">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Branch Modal -->
+    <div id="branchModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+            <h2 id="branchModalTitle" class="text-2xl font-bold mb-6" style="color: var(--green-dark);">Edit Branch</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Branch Name</label>
+                    <input type="text" id="branchName" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Address</label>
+                    <input type="text" id="branchAddress" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Phone</label>
+                    <input type="text" id="branchPhone" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Operating Hours</label>
+                    <input type="text" id="branchHours" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
+                </div>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <button onclick="saveBranch()" class="flex-1 text-white py-3 rounded-lg font-semibold btn-green">Save</button>
+                <button onclick="closeBranchModal()" class="flex-1 bg-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-400">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Manager Modal -->
+    <div id="sliderManagerModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl p-8 max-w-4xl w-full my-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold" style="color: var(--green-dark);">🖼️ Manage Gallery</h2>
+                <button onclick="closeSliderManager()" class="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+            </div>
+            <div id="sliderItemsList" class="space-y-4 mb-6"></div>
+            <button onclick="addNewSliderItem()" class="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 flex items-center justify-center gap-2">
+                <span>➕</span><span>Add New Media</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <div class="relative overflow-hidden hero-bg text-white">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <!-- Decorative leaf pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2220%22 cy=%2220%22 r=%2215%22 fill=%22white%22/><circle cx=%2280%22 cy=%2280%22 r=%2215%22 fill=%22white%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22white%22/></svg>');"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <button id="editInfoBtn" onclick="openEditInfo()" class="hidden mb-4 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm mx-auto">
+                    ✏️ Edit Business Info
+                </button>
+
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="ChatOn_image__2_.jpeg" alt="Janis Chicken Logo" class="w-36 h-36 md:w-44 md:h-44 object-contain rounded-2xl shadow-2xl bg-white/10 backdrop-blur-sm p-2">
+                    </div>
+                    <div class="title-animated">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-3">
+                            Janis <span style="color: #a8d5b5;">Chicken</span>
+                        </h1>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start mb-2">
+                            <span class="nutrition-badge" style="background:rgba(255,255,255,0.2); border-color:rgba(255,255,255,0.4); color:white;">🥦 High Fiber</span>
+                            <span class="nutrition-badge" style="background:rgba(255,255,255,0.2); border-color:rgba(255,255,255,0.4); color:white;">💪 High Protein</span>
+                            <span class="nutrition-badge" style="background:rgba(255,255,255,0.2); border-color:rgba(255,255,255,0.4); color:white;">🔥 Low Calorie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="taglineText" class="text-xl md:text-2xl mb-8 mt-4 animate-fade-in" style="color: #c8f0d5; animation-delay: 0.6s;">
+                    More Than Just Healthy & Delicious Culinary
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
+                        <span>⭐</span><span id="ratingText">Rating 5.0/5</span>
+                    </div>
+                    <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
+                        <span>🕐</span><span>Open 09:00 - 22:00</span>
+                    </div>
+                    <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
+                        <span>📍</span><span>Egypt 🇪🇬</span>
+                    </div>
+                    <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
+                        <span>🚚</span><span>Delivery Across Egypt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16" style="background: linear-gradient(to top, #f7fdf9, transparent);"></div>
+    </div>
+
+    <!-- ===================== GALLERY SLIDER ===================== -->
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-3" style="color: var(--green-dark);">📸 Photo Gallery</h2>
+            <p class="text-gray-600">See the freshness and deliciousness of Janis Chicken</p>
+        </div>
+
+        <div class="gallery-slider">
+            <button id="editSliderBtn" onclick="openSliderManager()" class="slider-admin-btn hidden">✏️ Manage Gallery</button>
+            <div class="slider-counter"><span id="currentSlide">1</span> / <span id="totalSlides">0</span></div>
+            <button class="slider-control" onclick="toggleAutoPlay()" id="playPauseBtn" aria-label="Play/Pause">
+                <svg id="pauseIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="4" width="4" height="16"></rect>
+                    <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+                <svg id="playIcon" class="hidden" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+            </button>
+            <div class="slider-container" id="sliderContainer"></div>
+            <button class="slider-arrow prev" onclick="prevSlide()" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="slider-arrow next" onclick="nextSlide()" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+
+        <!-- Signature Menu -->
+        <div class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🍗 Signature Menu</h2>
+                </div>
+                <button id="addProductBtn1" onclick="openAddProduct('signature')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+            </div>
+            <div id="signatureProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+
+        <!-- Side Dishes -->
+        <div class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-light), var(--gold));"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🥗 Side Dishes</h2>
+                </div>
+                <button id="addProductBtn2" onclick="openAddProduct('sides')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+            </div>
+            <div id="bakeryProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+
+        <!-- Branches -->
+        <div>
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">📍 Our Locations in Egypt</h2>
+                </div>
+                <button id="addBranchBtn" onclick="openAddBranch()" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Branch</button>
+            </div>
+            <div id="branchesList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </div>
+    </div>
+
+    <!-- ===================== FLOATING CART ===================== -->
+    <div id="floatingCart" class="hidden fixed bottom-0 left-0 right-0 md:bottom-6 md:left-6 md:right-auto bg-white md:rounded-2xl rounded-t-2xl shadow-2xl p-4 md:p-6 md:max-w-md w-full md:mx-4 border-2 z-40 max-h-[90vh] md:max-h-[85vh] overflow-y-auto" style="border-color: var(--green-accent);">
+        <div class="flex items-center justify-between mb-4 sticky top-0 bg-white pb-2 border-b-2" style="border-color: var(--green-pale);">
+            <h3 class="text-lg md:text-xl font-bold flex items-center gap-2" style="color: var(--green-dark);">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </h3>
+            <button onclick="closeCart()" class="md:hidden text-gray-500 hover:text-gray-700 text-2xl font-bold w-8 h-8 flex items-center justify-center">✕</button>
+        </div>
+
+        <div id="cartItems" class="max-h-40 md:max-h-48 overflow-y-auto mb-4 space-y-3"></div>
+
+        <!-- GPS Location Section -->
+        <div class="border-t-2 pt-4 mb-4" style="border-color: var(--green-accent);">
+            <h4 class="font-bold mb-3 flex items-center gap-2 text-sm md:text-base" style="color: var(--green-dark);">
+                📍 Delivery Address
+            </h4>
+
+            <!-- GPS Location Display -->
+            <div id="locationDisplay">
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="text-green-600 font-bold text-sm">📡 GPS Location Detected</span>
+                </div>
+                <p id="locationText" class="text-sm text-gray-700 font-semibold"></p>
+                <p id="locationCoords" class="text-xs text-gray-500"></p>
+            </div>
+
+            <!-- GPS Button -->
+            <button onclick="getGPSLocation()" id="gpsBtn" class="w-full mb-3 text-white py-2 px-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 btn-green transition-all">
+                📡 Detect My Location (GPS)
+            </button>
+
+            <!-- Governorate Selection -->
+            <div class="mb-3">
+                <label class="block text-xs md:text-sm font-semibold mb-2" style="color: var(--green-dark);">Governorate</label>
+                <select id="cartProvinceSelect" onchange="loadCartCities()"
+                    class="w-full px-3 py-2 border-2 rounded-lg text-xs md:text-sm font-semibold focus:outline-none transition"
+                    style="border-color: var(--green-accent);">
+                    <option value="">-- Select Governorate --</option>
+                </select>
+            </div>
+
+            <!-- City Selection -->
+            <div class="mb-3" id="cartCityContainer" style="display: none;">
+                <label class="block text-xs md:text-sm font-semibold mb-2" style="color: var(--green-dark);">City / District</label>
+                <select id="cartCitySelect" onchange="updateCartWithShipping()"
+                    class="w-full px-3 py-2 border-2 rounded-lg text-xs md:text-sm font-semibold focus:outline-none transition"
+                    style="border-color: var(--green-accent);">
+                    <option value="">-- Select City --</option>
+                </select>
+            </div>
+
+            <!-- Shipping Info -->
+            <div id="shippingInfo" class="hidden mt-3 bg-green-50 border-2 border-green-300 rounded-lg p-3">
+                <div class="flex items-center justify-between text-xs md:text-sm mb-2">
+                    <span class="text-gray-600">📦 Total Weight:</span>
+                    <span class="font-bold text-gray-800" id="totalWeightDisplay">0 kg</span>
+                </div>
+                <div class="flex items-center justify-between text-xs md:text-sm">
+                    <span class="text-gray-600">⏱️ Estimated:</span>
+                    <span class="font-bold text-gray-800" id="estimateDisplay">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Summary -->
+        <div class="border-t-2 pt-4 mb-4 space-y-2 md:space-y-3" style="border-color: var(--green-accent);">
+            <div class="flex justify-between items-center text-sm md:text-base">
+                <span class="text-gray-700">Product Price:</span>
+                <span class="font-bold text-gray-800" id="cartSubtotal">EGP 0</span>
+            </div>
+            <div class="flex justify-between items-center text-sm md:text-base">
+                <span class="text-gray-700">Delivery Fee:</span>
+                <span class="font-bold" id="cartShippingCost" style="color: var(--green-primary);">EGP 0</span>
+            </div>
+            <div class="border-t-2 pt-2 md:pt-3" style="border-color: var(--green-accent);">
+                <div class="flex justify-between items-center text-lg md:text-xl">
+                    <span class="font-bold text-gray-800">Total:</span>
+                    <span class="font-bold text-green-600" id="cartTotal">EGP 0</span>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="sendWhatsAppOrder()" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 md:py-4 rounded-xl font-bold text-base md:text-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 md:gap-3 shadow-lg">
+            📱 Order via WhatsApp
+        </button>
+    </div>
+
+    <!-- Mobile Cart Toggle -->
+    <button id="mobileCartToggle" onclick="toggleCart()" class="md:hidden hidden fixed bottom-4 left-4 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl z-50 transition-all duration-300" style="background: var(--green-primary);">
+        <div class="relative">
+            <span class="text-2xl">🛒</span>
+            <span id="mobileCartBadge" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center animate-pulse">0</span>
+        </div>
+    </button>
+
+    <!-- ===================== SHIPPING CALCULATOR ===================== -->
+    <section class="py-12 md:py-20 shipping-bg mt-12 md:mt-20">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+            <div class="text-center mb-8 md:mb-12 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4" style="color: var(--green-dark);">
+                    📦 Delivery Cost Calculator
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg px-4">Check estimated delivery fee to your location in Egypt</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 md:border-4" style="border-color: var(--green-accent);">
+                    <div class="p-6 md:p-8 text-white" style="background: linear-gradient(135deg, var(--green-primary), var(--green-dark));">
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">🚚 Delivery Calculator</h3>
+                        <p class="text-sm md:text-base" style="color: #c8f0d5;">Select your delivery destination in Egypt</p>
+                    </div>
+
+                    <div class="p-4 md:p-8">
+                        <!-- GPS Auto-detect -->
+                        <div class="mb-5 p-4 rounded-xl border-2" style="background: var(--green-pale); border-color: var(--green-accent);">
+                            <p class="font-bold text-sm mb-3" style="color: var(--green-dark);">📡 Auto-detect Your Location</p>
+                            <button onclick="getGPSForCalculator()" class="w-full text-white font-bold py-3 px-6 rounded-xl text-base shadow-lg hover:shadow-xl transition duration-300 btn-green">
+                                🛰️ Use My GPS Location
+                            </button>
+                            <div id="calcLocationDisplay" class="hidden mt-3 p-3 bg-white rounded-lg border" style="border-color: var(--green-accent);">
+                                <p id="calcLocationText" class="text-sm font-semibold" style="color: var(--green-dark);"></p>
+                            </div>
+                        </div>
+
+                        <!-- Weight Input -->
+                        <div class="mb-5 md:mb-6">
+                            <label class="block text-gray-700 font-bold mb-2 md:mb-3 text-base md:text-lg">⚖️ Package Weight (kg)</label>
+                            <div class="relative">
+                                <input type="number" id="packageWeight" value="1" min="0.5" step="0.5"
+                                    class="w-full px-4 md:px-6 py-3 md:py-4 border-2 rounded-lg md:rounded-xl text-lg md:text-xl font-semibold focus:outline-none transition"
+                                    style="border-color: var(--green-accent);">
+                                <div class="absolute right-3 md:right-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-bold text-sm md:text-base">KG</div>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2 mt-3">
+                                <button onclick="setWeight(1)" class="font-semibold py-2 px-2 md:px-4 rounded-lg transition text-sm md:text-base" style="background: var(--green-pale); color: var(--green-dark);">1 kg</button>
+                                <button onclick="setWeight(2)" class="font-semibold py-2 px-2 md:px-4 rounded-lg transition text-sm md:text-base" style="background: var(--green-pale); color: var(--green-dark);">2 kg</button>
+                                <button onclick="setWeight(3)" class="font-semibold py-2 px-2 md:px-4 rounded-lg transition text-sm md:text-base" style="background: var(--green-pale); color: var(--green-dark);">3 kg</button>
+                                <button onclick="setWeight(5)" class="font-semibold py-2 px-2 md:px-4 rounded-lg transition text-sm md:text-base" style="background: var(--green-pale); color: var(--green-dark);">5 kg</button>
+                            </div>
+                        </div>
+
+                        <!-- Governorate Selection -->
+                        <div class="mb-5 md:mb-6">
+                            <label class="block text-gray-700 font-bold mb-2 md:mb-3 text-base md:text-lg">🗺️ Select Governorate</label>
+                            <select id="provinceSelect" onchange="loadCities()"
+                                class="w-full px-4 md:px-6 py-3 md:py-4 border-2 rounded-lg md:rounded-xl text-base md:text-lg font-semibold focus:outline-none transition appearance-none bg-white cursor-pointer"
+                                style="border-color: var(--green-accent);">
+                                <option value="">-- Select Governorate --</option>
+                            </select>
+                        </div>
+
+                        <!-- City Selection -->
+                        <div class="mb-5 md:mb-6" id="citySelectContainer" style="display: none;">
+                            <label class="block text-gray-700 font-bold mb-2 md:mb-3 text-base md:text-lg">🏙️ Select City / District</label>
+                            <select id="citySelect"
+                                class="w-full px-4 md:px-6 py-3 md:py-4 border-2 rounded-lg md:rounded-xl text-base md:text-lg font-semibold focus:outline-none transition appearance-none bg-white cursor-pointer"
+                                style="border-color: var(--green-accent);">
+                                <option value="">-- Select City --</option>
+                            </select>
+                        </div>
+
+                        <button onclick="calculateShipping()"
+                            class="w-full text-white font-bold py-4 md:py-5 px-6 md:px-8 rounded-xl text-lg md:text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 btn-green">
+                            💰 Calculate Delivery Cost
+                        </button>
+
+                        <!-- Result -->
+                        <div id="resultDisplay" class="mt-6 md:mt-8 hidden">
+                            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 md:border-3 border-green-300">
+                                <div class="text-center mb-4">
+                                    <div class="text-5xl md:text-6xl mb-3">✅</div>
+                                    <h4 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Estimated Delivery Cost</h4>
+                                </div>
+                                <div class="bg-white rounded-lg md:rounded-xl p-4 md:p-6 mb-4 shadow-md">
+                                    <div class="flex items-center justify-between mb-3 pb-3 border-b-2 border-gray-200">
+                                        <span class="text-gray-600 text-sm md:text-base">📍 Destination:</span>
+                                        <span class="font-bold text-gray-800 text-sm md:text-base" id="destination">-</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-3 pb-3 border-b-2 border-gray-200">
+                                        <span class="text-gray-600 text-sm md:text-base">⚖️ Weight:</span>
+                                        <span class="font-bold text-gray-800 text-sm md:text-base" id="weightDisplay">-</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-3 pb-3 border-b-2 border-gray-200">
+                                        <span class="text-gray-600 text-sm md:text-base">⏱️ Estimated Time:</span>
+                                        <span class="font-bold text-gray-800 text-sm md:text-base" id="estimate">-</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-600 font-bold text-base md:text-lg">💰 Delivery Fee:</span>
+                                        <span class="font-bold text-2xl md:text-3xl" style="color: var(--green-primary);" id="shippingCost">EGP 0</span>
+                                    </div>
+                                </div>
+                                <button onclick="orderViaWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 md:py-4 px-6 rounded-xl text-base md:text-lg shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center gap-2 md:gap-3">
+                                    📱 Order via WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
+                    <div class="bg-white rounded-xl md:rounded-2xl p-5 md:p-6 shadow-lg border-2 hover:shadow-xl transition transform hover:-translate-y-1" style="border-color: var(--green-accent);">
+                        <div class="text-3xl md:text-4xl mb-2 md:mb-3 text-center">🚚</div>
+                        <h4 class="font-bold text-base md:text-lg mb-2 text-center" style="color: var(--green-dark);">Fast Delivery</h4>
+                        <p class="text-gray-600 text-center text-xs md:text-sm">Safe and fast delivery across all Egypt governorates</p>
+                    </div>
+                    <div class="bg-white rounded-xl md:rounded-2xl p-5 md:p-6 shadow-lg border-2 hover:shadow-xl transition transform hover:-translate-y-1" style="border-color: var(--green-accent);">
+                        <div class="text-3xl md:text-4xl mb-2 md:mb-3 text-center">🧊</div>
+                        <h4 class="font-bold text-base md:text-lg mb-2 text-center" style="color: var(--green-dark);">Safe Packing</h4>
+                        <p class="text-gray-600 text-center text-xs md:text-sm">Food packed with insulated cold pack to maintain freshness</p>
+                    </div>
+                    <div class="bg-white rounded-xl md:rounded-2xl p-5 md:p-6 shadow-lg border-2 hover:shadow-xl transition transform hover:-translate-y-1" style="border-color: var(--green-accent);">
+                        <div class="text-3xl md:text-4xl mb-2 md:mb-3 text-center">💯</div>
+                        <h4 class="font-bold text-base md:text-lg mb-2 text-center" style="color: var(--green-dark);">Trusted</h4>
+                        <p class="text-gray-600 text-center text-xs md:text-sm">Trusted by thousands of customers across Egypt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="text-white py-12 mt-20" style="background: linear-gradient(135deg, var(--green-dark), #1a2e22);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--green-accent);">Janis Chicken 🐔</h3>
+                    <p id="footerDescription" class="text-gray-300">More than just healthy & delicious culinary. High protein, low calorie, rich in fiber — for your best life in Egypt.</p>
+                    <div class="flex gap-2 mt-4 flex-wrap">
+                        <span class="nutrition-badge" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#c8f0d5;">💪 High Protein</span>
+                        <span class="nutrition-badge" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#c8f0d5;">🔥 Low Calorie</span>
+                        <span class="nutrition-badge" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#c8f0d5;">🥦 High Fiber</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📞 +20 100 000 0000</p>
+                        <p>📍 Cairo, Egypt 🇪🇬</p>
+                        <p>🌐 janischicken.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Operating Hours</h4>
+                    <p class="text-gray-300">Every Day<br>09:00 - 22:00 (Cairo Time)</p>
+                    <p class="text-gray-400 text-sm mt-3">Delivery available all Egypt governorates 🇪🇬</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Janis Chicken Egypt. All rights reserved. | More Than Just Healthy & Delicious Culinary</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        // Admin Credentials
+        const adminAccounts = {
+            'admin': 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', // password: 123
+        };
+
+        async function hashPassword(password) {
+            const msgBuffer = new TextEncoder().encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        let isAdmin = false;
+        let currentAdminUsername = '';
+        let cart = [];
+        let currentEditProduct = null;
+        let currentEditBranch = null;
+        let isAddingNew = false;
+        let cartSelectedProvince = '';
+        let cartSelectedCity = '';
+        let cartShippingCost = 0;
+        let cartTotalWeight = 0;
+        let userGPSCoords = null;
+        const WEIGHT_PER_PACK = 0.5;
+
+        // =============================================
+        // DEFAULT PRODUCTS - Janis Chicken
+        // =============================================
+        const defaultProducts = [
+            {
+                id: 1, name: 'Grilled Chicken Breast', price: 89,
+                image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400',
+                description: 'Juicy grilled chicken breast — high protein, low fat, seasoned to perfection',
+                category: 'signature'
+            },
+            {
+                id: 2, name: 'Crispy Chicken', price: 79,
+                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400',
+                description: 'Golden crispy chicken with a crunchy coating — irresistibly delicious',
+                category: 'signature'
+            },
+            {
+                id: 3, name: 'Chicken & Mashed Potato Combo', price: 119,
+                image: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400',
+                description: 'Grilled chicken breast + creamy mashed potato — the perfect healthy combo',
+                category: 'signature'
+            },
+            {
+                id: 4, name: 'Healthy Chicken Bowl', price: 99,
+                image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400',
+                description: 'Chicken + steamed vegetables + mashed potato — balanced nutrition in one bowl',
+                category: 'signature'
+            },
+            {
+                id: 5, name: 'Steamed Veggie Platter', price: 55,
+                image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
+                description: 'Assorted steamed vegetables rich in fiber and vitamins',
+                category: 'sides'
+            },
+            {
+                id: 6, name: 'Creamy Mashed Potato', price: 45,
+                image: 'https://images.unsplash.com/photo-1635321593217-40050ad13c74?w=400',
+                description: 'Smooth and creamy mashed potato — comfort food at its finest',
+                category: 'sides'
+            }
+        ];
+
+        const defaultBranches = [
+            { id: 1, name: 'Janis Chicken Cairo - Nasr City', address: 'Nasr City, Cairo, Egypt', phone: '+20-100-000-0001', hours: '09:00 - 22:00' },
+            { id: 2, name: 'Janis Chicken Giza', address: 'Mohandessin, Giza, Egypt', phone: '+20-100-000-0002', hours: '09:00 - 22:00' }
+        ];
+
+        const defaultBusinessInfo = {
+            tagline: 'More Than Just Healthy & Delicious Culinary',
+            rating: '5.0/5',
+            description: 'More than just healthy & delicious culinary. High protein, low calorie, rich in fiber for your best life in Egypt.'
+        };
+
+        // =============================================
+        // EGYPT SHIPPING RATES (EGP)
+        // =============================================
+        const shippingRates = {
+            "Cairo": {
+                "Nasr City": { baseCost: 20, perKg: 5, estimate: "Same Day" },
+                "Heliopolis": { baseCost: 20, perKg: 5, estimate: "Same Day" },
+                "Maadi": { baseCost: 25, perKg: 5, estimate: "Same Day" },
+                "Downtown Cairo": { baseCost: 25, perKg: 5, estimate: "Same Day" },
+                "Zamalek": { baseCost: 25, perKg: 5, estimate: "Same Day" },
+                "New Cairo": { baseCost: 30, perKg: 6, estimate: "Same Day" },
+                "6th of October": { baseCost: 35, perKg: 6, estimate: "1 Day" }
+            },
+            "Giza": {
+                "Mohandessin": { baseCost: 25, perKg: 5, estimate: "Same Day" },
+                "Dokki": { baseCost: 25, perKg: 5, estimate: "Same Day" },
+                "Haram": { baseCost: 30, perKg: 6, estimate: "1 Day" },
+                "Sheikh Zayed": { baseCost: 35, perKg: 6, estimate: "1 Day" }
+            },
+            "Alexandria": {
+                "Alexandria City": { baseCost: 50, perKg: 8, estimate: "1-2 Days" },
+                "Smouha": { baseCost: 50, perKg: 8, estimate: "1-2 Days" },
+                "Miami": { baseCost: 55, perKg: 9, estimate: "1-2 Days" },
+                "Agami": { baseCost: 55, perKg: 9, estimate: "2 Days" }
+            },
+            "Sharm El Sheikh": {
+                "Sharm City": { baseCost: 80, perKg: 12, estimate: "2-3 Days" },
+                "Naama Bay": { baseCost: 80, perKg: 12, estimate: "2-3 Days" }
+            },
+            "Hurghada": {
+                "Hurghada City": { baseCost: 75, perKg: 11, estimate: "2-3 Days" },
+                "El Dahar": { baseCost: 75, perKg: 11, estimate: "2-3 Days" }
+            },
+            "Luxor": {
+                "Luxor City": { baseCost: 90, perKg: 14, estimate: "2-3 Days" },
+                "East Bank": { baseCost: 90, perKg: 14, estimate: "2-3 Days" }
+            },
+            "Aswan": {
+                "Aswan City": { baseCost: 100, perKg: 15, estimate: "3 Days" },
+                "Corniche": { baseCost: 100, perKg: 15, estimate: "3 Days" }
+            },
+            "Suez": {
+                "Suez City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+            },
+            "Mansoura": {
+                "Mansoura City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" },
+                "Mit Ghamr": { baseCost: 60, perKg: 10, estimate: "2 Days" }
+            },
+            "Tanta": {
+                "Tanta City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" }
+            },
+            "Zagazig": {
+                "Zagazig City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" }
+            },
+            "Ismailia": {
+                "Ismailia City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+            },
+            "Port Said": {
+                "Port Said City": { baseCost: 65, perKg: 10, estimate: "2 Days" }
+            },
+            "Damietta": {
+                "Damietta City": { baseCost: 65, perKg: 10, estimate: "2 Days" }
+            },
+            "Fayoum": {
+                "Fayoum City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+            },
+            "Beni Suef": {
+                "Beni Suef City": { baseCost: 65, perKg: 11, estimate: "2 Days" }
+            },
+            "Minya": {
+                "Minya City": { baseCost: 75, perKg: 12, estimate: "2-3 Days" }
+            },
+            "Asyut": {
+                "Asyut City": { baseCost: 85, perKg: 13, estimate: "2-3 Days" }
+            },
+            "Sohag": {
+                "Sohag City": { baseCost: 90, perKg: 14, estimate: "3 Days" }
+            },
+            "Qena": {
+                "Qena City": { baseCost: 90, perKg: 14, estimate: "3 Days" }
+            }
+        };
+
+        let selectedProvince = '';
+        let selectedCity = '';
+        let selectedCityData = null;
+
+        // =============================================
+        // GPS FUNCTIONS
+        // =============================================
+        function requestGPSPermission() {
+            if (!navigator.geolocation) {
+                Swal.fire({
+                    title: 'GPS Not Available',
+                    text: 'Your device does not support GPS. Please select your location manually.',
+                    icon: 'warning',
+                    confirmButtonColor: '#4a7c59',
+                    confirmButtonText: 'OK'
+                });
+                return;
+            }
+
+            Swal.fire({
+                title: '📡 Enable GPS Location',
+                html: `
+                    <div style="text-align:center; padding: 10px 0;">
+                        <div style="font-size: 60px; margin-bottom: 15px;">🛰️</div>
+                        <p style="color: #4a7c59; font-weight: 700; font-size: 1.1em; margin-bottom: 10px;">Janis Chicken needs your location</p>
+                        <p style="color: #666; font-size: 0.9em;">Allow us to detect your location to automatically calculate the delivery fee to your address in Egypt.</p>
+                    </div>
+                `,
+                showCancelButton: true,
+                confirmButtonColor: '#4a7c59',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '📍 Allow GPS',
+                cancelButtonText: 'Enter Manually',
+                allowOutsideClick: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    detectLocation();
+                }
+            });
+        }
+
+        function detectLocation() {
+            Swal.fire({
+                title: 'Detecting Location...',
+                html: '<div style="font-size:40px;margin:20px 0;">📡</div><p>Please wait while we detect your GPS location...</p>',
+                allowOutsideClick: false,
+                showConfirmButton: false,
+                didOpen: () => { Swal.showLoading(); }
+            });
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    userGPSCoords = { lat, lng };
+
+                    // Try to reverse geocode using nominatim
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&accept-language=en`)
+                        .then(r => r.json())
+                        .then(data => {
+                            const city = data.address.city || data.address.town || data.address.village || 'Unknown';
+                            const state = data.address.state || data.address.county || '';
+                            const country = data.address.country || '';
+
+                            Swal.fire({
+                                title: '✅ Location Detected!',
+                                html: `
+                                    <div style="text-align:center; padding:10px 0;">
+                                        <div style="font-size:50px; margin-bottom:15px;">📍</div>
+                                        <p style="font-weight:700; color:#4a7c59; font-size:1.1em;">${city}, ${state}</p>
+                                        <p style="color:#666; font-size:0.85em;">${country}</p>
+                                        <p style="color:#999; font-size:0.75em; margin-top:8px;">Coords: ${lat.toFixed(4)}, ${lng.toFixed(4)}</p>
+                                    </div>
+                                `,
+                                confirmButtonColor: '#4a7c59',
+                                confirmButtonText: 'Great!'
+                            });
+
+                            // Update display elements
+                            const locDisplay = document.getElementById('locationDisplay');
+                            if (locDisplay) {
+                                locDisplay.style.display = 'block';
+                                document.getElementById('locationText').textContent = `📍 ${city}, ${state}, ${country}`;
+                                document.getElementById('locationCoords').textContent = `GPS: ${lat.toFixed(4)}, ${lng.toFixed(4)}`;
+                            }
+
+                            // Try to auto-select nearest governorate in Egypt
+                            autoSelectEgyptLocation(city, state);
+                        })
+                        .catch(() => {
+                            Swal.fire({
+                                title: '✅ GPS Detected',
+                                html: `<p>Coordinates: ${lat.toFixed(4)}, ${lng.toFixed(4)}</p><p style="color:#666;font-size:0.85em;margin-top:8px;">Please select your governorate manually below.</p>`,
+                                confirmButtonColor: '#4a7c59'
+                            });
+                        });
+                },
+                (error) => {
+                    let msg = 'Could not detect your location.';
+                    if (error.code === 1) msg = 'GPS permission denied. Please allow location access or select manually.';
+                    else if (error.code === 2) msg = 'Location unavailable. Please select manually.';
+                    else if (error.code === 3) msg = 'Location request timed out. Please select manually.';
+
+                    Swal.fire({
+                        title: '⚠️ GPS Error',
+                        text: msg,
+                        icon: 'warning',
+                        confirmButtonColor: '#4a7c59',
+                        confirmButtonText: 'Select Manually'
+                    });
+                },
+                { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
+            );
+        }
+
+        function autoSelectEgyptLocation(city, state) {
+            // Try to find matching governorate
+            const govs = Object.keys(shippingRates);
+            let matchedGov = null;
+            const searchStr = (city + ' ' + state).toLowerCase();
+
+            for (const gov of govs) {
+                if (searchStr.includes(gov.toLowerCase()) || gov.toLowerCase().includes(city.toLowerCase())) {
+                    matchedGov = gov;
+                    break;
+                }
+            }
+
+            if (matchedGov) {
+                const pSelect = document.getElementById('cartProvinceSelect');
+                const pSelect2 = document.getElementById('provinceSelect');
+                if (pSelect) { pSelect.value = matchedGov; loadCartCities(); }
+                if (pSelect2) { pSelect2.value = matchedGov; loadCities(); }
+            }
+        }
+
+        function getGPSLocation() {
+            requestGPSPermission();
+        }
+
+        function getGPSForCalculator() {
+            requestGPSPermission();
+        }
+
+        // =============================================
+        // SHIPPING CALCULATOR
+        // =============================================
+        function initShippingCalculator() {
+            const provinceSelect = document.getElementById('provinceSelect');
+            Object.keys(shippingRates).sort().forEach(province => {
+                const option = document.createElement('option');
+                option.value = province;
+                option.textContent = province;
+                provinceSelect.appendChild(option);
+            });
+        }
+
+        function setWeight(weight) { document.getElementById('packageWeight').value = weight; }
+
+        function loadCities() {
+            const provinceSelect = document.getElementById('provinceSelect');
+            const citySelect = document.getElementById('citySelect');
+            const cityContainer = document.getElementById('citySelectContainer');
+            selectedProvince = provinceSelect.value;
+            if (!selectedProvince) {
+                cityContainer.style.display = 'none';
+                document.getElementById('resultDisplay').classList.add('hidden');
+                return;
+            }
+            citySelect.innerHTML = '<option value="">-- Select City --</option>';
+            Object.keys(shippingRates[selectedProvince]).sort().forEach(city => {
+                const option = document.createElement('option');
+                option.value = city; option.textContent = city;
+                citySelect.appendChild(option);
+            });
+            cityContainer.style.display = 'block';
+            document.getElementById('resultDisplay').classList.add('hidden');
+        }
+
+        function calculateShipping() {
+            const weight = parseFloat(document.getElementById('packageWeight').value);
+            selectedProvince = document.getElementById('provinceSelect').value;
+            selectedCity = document.getElementById('citySelect').value;
+            if (!selectedProvince || !selectedCity) {
+                Swal.fire({ title: '⚠️ Incomplete', text: 'Please select governorate and city first!', icon: 'warning', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            if (weight < 0.5) {
+                Swal.fire({ title: '⚠️ Minimum Weight', text: 'Minimum weight is 0.5 kg', icon: 'warning', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            selectedCityData = shippingRates[selectedProvince][selectedCity];
+            const totalCost = selectedCityData.baseCost + (selectedCityData.perKg * weight);
+            document.getElementById('destination').textContent = `${selectedCity}, ${selectedProvince}`;
+            document.getElementById('weightDisplay').textContent = `${weight} kg`;
+            document.getElementById('estimate').textContent = selectedCityData.estimate;
+            document.getElementById('shippingCost').textContent = `EGP ${totalCost.toLocaleString()}`;
+            document.getElementById('resultDisplay').classList.remove('hidden');
+            document.getElementById('resultDisplay').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function orderViaWhatsApp() {
+            const weight = parseFloat(document.getElementById('packageWeight').value);
+            const totalCost = selectedCityData.baseCost + (selectedCityData.perKg * weight);
+            let message = '*NEW ORDER - Janis Chicken* 🐔%0A%0A';
+            message += `📦 *Delivery Details:*%0A`;
+            message += `📍 Destination: ${selectedCity}, ${selectedProvince}%0A`;
+            message += `⚖️ Weight: ${weight} kg%0A`;
+            message += `⏱️ Estimated: ${selectedCityData.estimate}%0A`;
+            message += `💵 Delivery Fee: EGP ${totalCost}%0A%0A`;
+            message += `I would like to order from Janis Chicken with the above delivery details.%0A%0A`;
+            message += 'Thank you! 🙏';
+            window.open(`https://wa.me/201000000000?text=${message}`, '_blank');
+        }
+
+        // =============================================
+        // CART SHIPPING
+        // =============================================
+        function initCartShipping() {
+            const sel = document.getElementById('cartProvinceSelect');
+            Object.keys(shippingRates).sort().forEach(province => {
+                const option = document.createElement('option');
+                option.value = province; option.textContent = province;
+                sel.appendChild(option);
+            });
+        }
+
+        function loadCartCities() {
+            const pSel = document.getElementById('cartProvinceSelect');
+            const cSel = document.getElementById('cartCitySelect');
+            const cCont = document.getElementById('cartCityContainer');
+            cartSelectedProvince = pSel.value;
+            if (!cartSelectedProvince) {
+                cCont.style.display = 'none';
+                document.getElementById('shippingInfo').classList.add('hidden');
+                cartShippingCost = 0;
+                updateCart();
+                return;
+            }
+            cSel.innerHTML = '<option value="">-- Select City --</option>';
+            Object.keys(shippingRates[cartSelectedProvince]).sort().forEach(city => {
+                const option = document.createElement('option');
+                option.value = city; option.textContent = city;
+                cSel.appendChild(option);
+            });
+            cCont.style.display = 'block';
+            document.getElementById('shippingInfo').classList.add('hidden');
+            cartShippingCost = 0;
+            updateCart();
+        }
+
+        function updateCartWithShipping() {
+            const cSel = document.getElementById('cartCitySelect');
+            cartSelectedCity = cSel.value;
+            if (!cartSelectedCity) { cartShippingCost = 0; updateCart(); return; }
+            const cityData = shippingRates[cartSelectedProvince][cartSelectedCity];
+            cartTotalWeight = cart.reduce((sum, item) => sum + (item.qty * WEIGHT_PER_PACK), 0);
+            cartShippingCost = cityData.baseCost + (cityData.perKg * cartTotalWeight);
+            document.getElementById('totalWeightDisplay').textContent = `${cartTotalWeight} kg`;
+            document.getElementById('estimateDisplay').textContent = cityData.estimate;
+            document.getElementById('shippingInfo').classList.remove('hidden');
+            updateCart();
+        }
+
+        // =============================================
+        // ADMIN FUNCTIONS
+        // =============================================
+        function toggleAdmin() {
+            if (isAdmin) { logout(); }
+            else { document.getElementById('adminLoginModal').classList.remove('hidden'); }
+        }
+
+        function closeAdminLogin() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+        }
+
+        async function loginAdmin() {
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value;
+            if (!username || !password) {
+                Swal.fire({ title: 'Error', text: 'Username and password are required!', icon: 'error', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            const hashedPassword = await hashPassword(password);
+            if (adminAccounts[username] && adminAccounts[username] === hashedPassword) {
+                isAdmin = true;
+                currentAdminUsername = username;
+                closeAdminLogin();
+                document.getElementById('adminBtn').innerHTML = '👤';
+                showAdminButtons();
+                renderProducts(); renderBranches();
+                Swal.fire({ title: 'Welcome!', text: `Hello, ${username}! 👋`, icon: 'success', confirmButtonColor: '#4a7c59', timer: 2000 });
+            } else {
+                Swal.fire({ title: 'Login Failed', text: 'Wrong username or password! ❌', icon: 'error', confirmButtonColor: '#4a7c59' });
+            }
+        }
+
+        function logout() {
+            isAdmin = false; currentAdminUsername = '';
+            document.getElementById('adminBtn').innerHTML = '⚙️';
+            hideAdminButtons(); renderProducts(); renderBranches();
+        }
+
+        function showAdminButtons() {
+            ['editInfoBtn','addProductBtn1','addProductBtn2','addBranchBtn','editSliderBtn'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.remove('hidden');
+            });
+        }
+
+        function hideAdminButtons() {
+            ['editInfoBtn','addProductBtn1','addProductBtn2','addBranchBtn','editSliderBtn'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+        }
+
+        // Business Info
+        function openEditInfo() {
+            const info = businessInfo;
+            document.getElementById('editTagline').value = info.tagline;
+            document.getElementById('editRating').value = info.rating;
+            document.getElementById('editDescription').value = info.description;
+            document.getElementById('editInfoModal').classList.remove('hidden');
+        }
+        function closeEditInfo() { document.getElementById('editInfoModal').classList.add('hidden'); }
+        function saveBusinessInfo() {
+            businessInfo.tagline = document.getElementById('editTagline').value;
+            businessInfo.rating = document.getElementById('editRating').value;
+            businessInfo.description = document.getElementById('editDescription').value;
+            localStorage.setItem('janis-chicken-info', JSON.stringify(businessInfo));
+            updateBusinessInfo(); closeEditInfo();
+        }
+        function updateBusinessInfo() {
+            document.getElementById('taglineText').textContent = businessInfo.tagline;
+            document.getElementById('ratingText').textContent = 'Rating ' + businessInfo.rating;
+            document.getElementById('footerDescription').textContent = businessInfo.description;
+        }
+
+        // Products
+        function openAddProduct(category) {
+            isAddingNew = true; currentEditProduct = null;
+            document.getElementById('productModalTitle').textContent = 'Add New Product';
+            document.getElementById('productName').value = '';
+            document.getElementById('productPrice').value = '';
+            document.getElementById('productImage').value = '';
+            document.getElementById('productDescription').value = '';
+            document.getElementById('productCategory').value = category;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function editProduct(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+            isAddingNew = false; currentEditProduct = id;
+            document.getElementById('productModalTitle').textContent = 'Edit Product';
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productImage').value = product.image;
+            document.getElementById('productDescription').value = product.description;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() { document.getElementById('productModal').classList.add('hidden'); }
+
+        function saveProduct() {
+            const name = document.getElementById('productName').value.trim();
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const image = document.getElementById('productImage').value.trim();
+            const description = document.getElementById('productDescription').value.trim();
+            const category = document.getElementById('productCategory').value;
+            if (!name || !price) {
+                Swal.fire({ title: 'Incomplete', text: 'Please fill name and price!', icon: 'warning', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            if (isAddingNew) {
+                const newId = Math.max(...products.map(p => p.id), 0) + 1;
+                products.push({ id: newId, name, price, image: image || 'https://via.placeholder.com/400x300', description, category });
+            } else {
+                const idx = products.findIndex(p => p.id === currentEditProduct);
+                if (idx > -1) products[idx] = { ...products[idx], name, price, image: image || products[idx].image, description, category };
+            }
+            localStorage.setItem('janis-chicken-products', JSON.stringify(products));
+            closeProductModal(); renderProducts();
+        }
+
+        function deleteProduct(id) {
+            Swal.fire({
+                title: 'Delete Product?', text: 'This action cannot be undone.',
+                icon: 'warning', showCancelButton: true,
+                confirmButtonColor: '#d33', cancelButtonColor: '#4a7c59',
+                confirmButtonText: 'Yes, Delete', cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    products = products.filter(p => p.id !== id);
+                    localStorage.setItem('janis-chicken-products', JSON.stringify(products));
+                    renderProducts();
+                }
+            });
+        }
+
+        function renderProducts() {
+            const sigContainer = document.getElementById('signatureProducts');
+            const sideContainer = document.getElementById('bakeryProducts');
+            sigContainer.innerHTML = ''; sideContainer.innerHTML = '';
+            products.forEach(product => {
+                const card = createProductCard(product);
+                if (product.category === 'signature') sigContainer.appendChild(card);
+                else sideContainer.appendChild(card);
+            });
+        }
+
+        function createProductCard(product) {
+            const div = document.createElement('div');
+            div.className = 'product-card hover-scale';
+            div.innerHTML = `
+                <div class="relative overflow-hidden" style="height:220px;">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" onerror="this.src='https://via.placeholder.com/400x300?text=Janis+Chicken'">
+                    <div class="absolute top-3 right-3">
+                        <span class="px-3 py-1 rounded-full text-white text-sm font-bold shadow-lg" style="background:var(--green-primary);">EGP ${product.price}</span>
+                    </div>
+                    ${isAdmin ? `
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <button onclick="editProduct(${product.id})" class="bg-white text-xs px-3 py-1 rounded-full shadow font-semibold hover:bg-gray-100" style="color:var(--green-dark);">✏️ Edit</button>
+                        <button onclick="deleteProduct(${product.id})" class="bg-red-500 text-white text-xs px-3 py-1 rounded-full shadow font-semibold hover:bg-red-600">🗑️</button>
+                    </div>` : ''}
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2" style="color:var(--green-dark);">${product.name}</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">${product.description}</p>
+                    <button onclick="addToCart(${product.id})" class="w-full text-white py-3 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 btn-green">
+                        🛒 Add to Cart
+                    </button>
+                </div>
+            `;
+            return div;
+        }
+
+        // Branches
+        function openAddBranch() {
+            isAddingNew = true; currentEditBranch = null;
+            document.getElementById('branchModalTitle').textContent = 'Add New Branch';
+            ['branchName','branchAddress','branchPhone','branchHours'].forEach(id => document.getElementById(id).value = '');
+            document.getElementById('branchModal').classList.remove('hidden');
+        }
+
+        function editBranch(id) {
+            const branch = branches.find(b => b.id === id);
+            if (!branch) return;
+            isAddingNew = false; currentEditBranch = id;
+            document.getElementById('branchModalTitle').textContent = 'Edit Branch';
+            document.getElementById('branchName').value = branch.name;
+            document.getElementById('branchAddress').value = branch.address;
+            document.getElementById('branchPhone').value = branch.phone;
+            document.getElementById('branchHours').value = branch.hours;
+            document.getElementById('branchModal').classList.remove('hidden');
+        }
+
+        function closeBranchModal() { document.getElementById('branchModal').classList.add('hidden'); }
+
+        function saveBranch() {
+            const name = document.getElementById('branchName').value.trim();
+            const address = document.getElementById('branchAddress').value.trim();
+            const phone = document.getElementById('branchPhone').value.trim();
+            const hours = document.getElementById('branchHours').value.trim();
+            if (!name || !address) {
+                Swal.fire({ title: 'Incomplete', text: 'Name and address are required!', icon: 'warning', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            if (isAddingNew) {
+                const newId = Math.max(...branches.map(b => b.id), 0) + 1;
+                branches.push({ id: newId, name, address, phone, hours });
+            } else {
+                const idx = branches.findIndex(b => b.id === currentEditBranch);
+                if (idx > -1) branches[idx] = { ...branches[idx], name, address, phone, hours };
+            }
+            localStorage.setItem('janis-chicken-branches', JSON.stringify(branches));
+            closeBranchModal(); renderBranches();
+        }
+
+        function deleteBranch(id) {
+            Swal.fire({
+                title: 'Delete Branch?', icon: 'warning', showCancelButton: true,
+                confirmButtonColor: '#d33', cancelButtonColor: '#4a7c59',
+                confirmButtonText: 'Yes', cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    branches = branches.filter(b => b.id !== id);
+                    localStorage.setItem('janis-chicken-branches', JSON.stringify(branches));
+                    renderBranches();
+                }
+            });
+        }
+
+        function renderBranches() {
+            const container = document.getElementById('branchesList');
+            container.innerHTML = '';
+            branches.forEach(branch => {
+                const div = document.createElement('div');
+                div.className = 'bg-white rounded-2xl p-6 shadow-lg border-2 hover:shadow-xl transition transform hover:-translate-y-1';
+                div.style = 'border-color: var(--green-accent);';
+                div.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg mb-2" style="color:var(--green-dark);">📍 ${branch.name}</h3>
+                            <p class="text-gray-600 text-sm mb-1">🏠 ${branch.address}</p>
+                            <p class="text-gray-600 text-sm mb-1">📞 ${branch.phone}</p>
+                            <p class="text-gray-600 text-sm">🕐 ${branch.hours}</p>
+                        </div>
+                        ${isAdmin ? `
+                        <div class="flex gap-2 ml-4">
+                            <button onclick="editBranch(${branch.id})" class="text-xs px-3 py-1 rounded-full border font-semibold hover:bg-green-50" style="border-color:var(--green-accent); color:var(--green-dark);">✏️ Edit</button>
+                            <button onclick="deleteBranch(${branch.id})" class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-semibold hover:bg-red-600">🗑️</button>
+                        </div>` : ''}
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // =============================================
+        // CART FUNCTIONS
+        // =============================================
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            const existing = cart.find(item => item.id === productId);
+            if (existing) { existing.qty++; }
+            else { cart.push({ id: productId, name: product.name, price: product.price, qty: 1 }); }
+            updateCart();
+            showCartNotification(product.name);
+        }
+
+        function showCartNotification(name) {
+            Swal.fire({
+                title: '✅ Added!', text: `${name} added to cart`, icon: 'success',
+                timer: 1500, showConfirmButton: false, toast: true,
+                position: 'top-end', background: '#e8f5ec', color: '#2d5a3d'
+            });
+        }
+
+        function removeFromCart(productId) {
+            const idx = cart.findIndex(item => item.id === productId);
+            if (idx === -1) return;
+            if (cart[idx].qty > 1) { cart[idx].qty--; }
+            else { cart.splice(idx, 1); }
+            updateCart();
+        }
+
+        function updateCart() {
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cartCount').textContent = count;
+            const badge = document.getElementById('mobileCartBadge');
+            if (badge) badge.textContent = count;
+            const mobileToggle = document.getElementById('mobileCartToggle');
+            const floatingCart = document.getElementById('floatingCart');
+            if (count > 0) {
+                if (window.innerWidth < 768) { mobileToggle.classList.remove('hidden'); }
+                else { floatingCart.classList.remove('hidden'); }
+            } else {
+                mobileToggle.classList.add('hidden');
+                floatingCart.classList.add('hidden');
+            }
+            renderCartItems();
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cartItems');
+            container.innerHTML = '';
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 text-center text-sm py-4">Your cart is empty 🛒</p>';
+            } else {
+                cart.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'flex items-center justify-between bg-gray-50 rounded-lg p-2';
+                    div.innerHTML = `
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-xs md:text-sm truncate" style="color:var(--green-dark);">${item.name}</p>
+                            <p class="text-gray-500 text-xs">EGP ${item.price} × ${item.qty}</p>
+                        </div>
+                        <div class="flex items-center gap-1 ml-2">
+                            <button onclick="removeFromCart(${item.id})" class="w-6 h-6 rounded-full text-white text-xs font-bold flex items-center justify-center" style="background:var(--green-primary);">−</button>
+                            <span class="font-bold text-sm w-5 text-center">${item.qty}</span>
+                            <button onclick="addToCart(${item.id})" class="w-6 h-6 rounded-full text-white text-xs font-bold flex items-center justify-center" style="background:var(--green-primary);">+</button>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+            }
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            if (cartSelectedCity) {
+                cartTotalWeight = cart.reduce((sum, item) => sum + (item.qty * WEIGHT_PER_PACK), 0);
+                const cityData = shippingRates[cartSelectedProvince]?.[cartSelectedCity];
+                if (cityData) { cartShippingCost = cityData.baseCost + (cityData.perKg * cartTotalWeight); }
+                document.getElementById('totalWeightDisplay').textContent = `${cartTotalWeight} kg`;
+            }
+            const total = subtotal + cartShippingCost;
+            document.getElementById('cartSubtotal').textContent = `EGP ${subtotal}`;
+            document.getElementById('cartShippingCost').textContent = `EGP ${cartShippingCost}`;
+            document.getElementById('cartTotal').textContent = `EGP ${total}`;
+        }
+
+        function toggleCart() {
+            const cart = document.getElementById('floatingCart');
+            cart.classList.toggle('hidden');
+        }
+
+        function closeCart() {
+            document.getElementById('floatingCart').classList.add('hidden');
+        }
+
+        function sendWhatsAppOrder() {
+            if (cart.length === 0) {
+                Swal.fire({ title: '🛒 Cart Empty', text: 'Please add items first!', icon: 'warning', confirmButtonColor: '#4a7c59' });
+                return;
+            }
+            let message = '*NEW ORDER - Janis Chicken 🐔*%0A%0A';
+            message += '*Order Items:*%0A';
+            cart.forEach(item => {
+                message += `• ${item.name} × ${item.qty} = EGP ${item.price * item.qty}%0A`;
+            });
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            message += `%0A*Subtotal:* EGP ${subtotal}%0A`;
+            if (cartSelectedCity) {
+                message += `*Delivery to:* ${cartSelectedCity}, ${cartSelectedProvince}%0A`;
+                message += `*Delivery Fee:* EGP ${cartShippingCost}%0A`;
+                message += `*Total:* EGP ${subtotal + cartShippingCost}%0A`;
+            }
+            if (userGPSCoords) {
+                message += `%0A*My GPS Location:* ${userGPSCoords.lat.toFixed(4)}, ${userGPSCoords.lng.toFixed(4)}%0A`;
+            }
+            message += '%0AThank you! 🙏';
+            window.open(`https://wa.me/201000000000?text=${message}`, '_blank');
+        }
+
+        // =============================================
+        // GALLERY SLIDER
+        // =============================================
+        const defaultSliderItems = [
+            { id: 1, type: 'image', url: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=1200', caption: '🍗 Janis Chicken - Grilled to Perfection' },
+            { id: 2, type: 'image', url: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=1200', caption: '🥘 Crispy Chicken - Golden & Delicious' },
+            { id: 3, type: 'image', url: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=1200', caption: '🥗 Healthy Bowl - Protein Rich, Low Calorie' },
+            { id: 4, type: 'image', url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200', caption: '🌿 Fresh Vegetables - Rich in Fiber' },
+            { id: 5, type: 'image', url: 'https://images.unsplash.com/photo-1635321593217-40050ad13c74?w=1200', caption: '🥔 Creamy Mashed Potato - Comfort & Nutrition' },
+        ];
+
+        let sliderItems = JSON.parse(localStorage.getItem('janis-chicken-slider')) || defaultSliderItems;
+        let currentSlideIndex = 0;
+        let sliderAutoPlay = true;
+        let sliderInterval = null;
+
+        const DATA_VERSION = document.lastModified || '20032026';
+        if (localStorage.getItem('janis-chicken-version') !== DATA_VERSION) {
+            localStorage.removeItem('janis-chicken-products');
+            localStorage.removeItem('janis-chicken-branches');
+            localStorage.removeItem('janis-chicken-info');
+            localStorage.removeItem('janis-chicken-slider');
+            localStorage.setItem('janis-chicken-version', DATA_VERSION);
+        }
+
+        let products = JSON.parse(localStorage.getItem('janis-chicken-products')) || defaultProducts;
+        let branches = JSON.parse(localStorage.getItem('janis-chicken-branches')) || defaultBranches;
+        let businessInfo = JSON.parse(localStorage.getItem('janis-chicken-info')) || defaultBusinessInfo;
+
+        function initSlider() {
+            const container = document.getElementById('sliderContainer');
+            const dotsContainer = document.getElementById('sliderDots');
+            document.getElementById('totalSlides').textContent = sliderItems.length;
+            container.innerHTML = '';
+            dotsContainer.innerHTML = '';
+            sliderItems.forEach((item, idx) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                if (item.type === 'video') {
+                    slide.innerHTML = `<video autoplay muted loop playsinline><source src="${item.url}"></video><div class="slide-caption">${item.caption || ''}</div>`;
+                } else {
+                    slide.innerHTML = `<img src="${item.url}" alt="${item.caption || ''}" loading="lazy"><div class="slide-caption">${item.caption || ''}</div>`;
+                }
+                container.appendChild(slide);
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (idx === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(idx);
+                dotsContainer.appendChild(dot);
+            });
+            startAutoPlay();
+        }
+
+        function goToSlide(idx) {
+            currentSlideIndex = idx;
+            document.getElementById('sliderContainer').style.transform = `translateX(-${idx * 100}%)`;
+            document.getElementById('currentSlide').textContent = idx + 1;
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+        }
+
+        function nextSlide() { goToSlide((currentSlideIndex + 1) % sliderItems.length); }
+        function prevSlide() { goToSlide((currentSlideIndex - 1 + sliderItems.length) % sliderItems.length); }
+
+        function startAutoPlay() {
+            if (sliderInterval) clearInterval(sliderInterval);
+            sliderInterval = setInterval(() => { if (sliderAutoPlay) nextSlide(); }, 5000);
+        }
+
+        function toggleAutoPlay() {
+            sliderAutoPlay = !sliderAutoPlay;
+            document.getElementById('pauseIcon').classList.toggle('hidden', !sliderAutoPlay);
+            document.getElementById('playIcon').classList.toggle('hidden', sliderAutoPlay);
+        }
+
+        function openSliderManager() {
+            const list = document.getElementById('sliderItemsList');
+            list.innerHTML = '';
+            sliderItems.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center gap-3 p-3 border rounded-lg';
+                div.style = 'border-color: var(--green-accent);';
+                div.innerHTML = `
+                    <div class="w-20 h-14 rounded overflow-hidden flex-shrink-0">
+                        ${item.type === 'video' ? `<video src="${item.url}" class="w-full h-full object-cover"></video>` : `<img src="${item.url}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/80x56'">`}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <input type="text" value="${item.url}" onchange="sliderItems[${idx}].url=this.value; saveSlider();" class="w-full px-2 py-1 border rounded text-xs mb-1" placeholder="Media URL" style="border-color:var(--green-accent);">
+                        <input type="text" value="${item.caption || ''}" onchange="sliderItems[${idx}].caption=this.value; saveSlider();" class="w-full px-2 py-1 border rounded text-xs" placeholder="Caption" style="border-color:var(--green-accent);">
+                    </div>
+                    <button onclick="deleteSliderItem(${item.id})" class="bg-red-500 text-white px-2 py-1 rounded text-xs hover:bg-red-600">🗑️</button>
+                `;
+                list.appendChild(div);
+            });
+            document.getElementById('sliderManagerModal').classList.remove('hidden');
+        }
+
+        function closeSliderManager() { document.getElementById('sliderManagerModal').classList.add('hidden'); initSlider(); }
+
+        function addNewSliderItem() {
+            const newId = Math.max(...sliderItems.map(s => s.id), 0) + 1;
+            sliderItems.push({ id: newId, type: 'image', url: '', caption: 'New slide' });
+            saveSlider(); openSliderManager();
+        }
+
+        function deleteSliderItem(id) {
+            sliderItems = sliderItems.filter(s => s.id !== id);
+            saveSlider(); openSliderManager();
+        }
+
+        function saveSlider() { localStorage.setItem('janis-chicken-slider', JSON.stringify(sliderItems)); }
+
+        // =============================================
+        // INIT
+        // =============================================
+        function init() {
+            renderProducts();
+            renderBranches();
+            updateBusinessInfo();
+            updateCart();
+            initSlider();
+            initShippingCalculator();
+            initCartShipping();
+
+            // Show GPS popup on load
+            setTimeout(() => {
+                requestGPSPermission();
+            }, 1500);
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
