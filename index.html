@@ -1360,7 +1360,7 @@
             businessInfo.tagline = document.getElementById('editTagline').value;
             businessInfo.rating = document.getElementById('editRating').value;
             businessInfo.description = document.getElementById('editDescription').value;
-            localStorage.setItem('Junis-chicken-info', JSON.stringify(businessInfo));
+            /* session only */
             updateBusinessInfo(); closeEditInfo();
         }
         function updateBusinessInfo() {
@@ -1414,7 +1414,7 @@
                     const idx = products.findIndex(p => p.id === currentEditProduct);
                     if (idx > -1) products[idx] = { ...products[idx], name, price, image: image || products[idx].image, description, category };
                 }
-            localStorage.setItem(\'Junis-chicken-products\', JSON.stringify(products));
+            /* session only */
             closeProductModal(); renderProducts();
         }
 
@@ -1427,7 +1427,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     products = products.filter(p => p.id !== id);
-                        localStorage.setItem('Junis-chicken-products', JSON.stringify(products));
+                        /* session only */
                     renderProducts();
                 }
             });
@@ -1509,7 +1509,7 @@
                 const idx = branches.findIndex(b => b.id === currentEditBranch);
                 if (idx > -1) branches[idx] = { ...branches[idx], name, address, phone, hours };
             }
-            localStorage.setItem('Junis-chicken-branches', JSON.stringify(branches));
+            /* session only */
             closeBranchModal(); renderBranches();
         }
 
@@ -1521,7 +1521,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     branches = branches.filter(b => b.id !== id);
-                    localStorage.setItem('Junis-chicken-branches', JSON.stringify(branches));
+                    /* session only */
                     renderBranches();
                 }
             });
@@ -1680,23 +1680,14 @@
             { id: 5, type: 'image', url: 'https://images.unsplash.com/photo-1635321593217-40050ad13c74?w=1200', caption: '🥔 Creamy Mashed Potato - Comfort & Nutrition' },
         ];
 
-        let sliderItems = JSON.parse(localStorage.getItem('Junis-chicken-slider')) || defaultSliderItems;
+        let sliderItems = JSON.parse(JSON.stringify(defaultSliderItems));
         let currentSlideIndex = 0;
         let sliderAutoPlay = true;
         let sliderInterval = null;
 
-        const DATA_VERSION = '24032026-v2';
-        if (localStorage.getItem('Junis-chicken-version') !== DATA_VERSION) {
-            localStorage.removeItem('Junis-chicken-products');
-            localStorage.removeItem('Junis-chicken-branches');
-            localStorage.removeItem('Junis-chicken-info');
-            localStorage.removeItem('Junis-chicken-slider');
-            localStorage.setItem('Junis-chicken-version', DATA_VERSION);
-        }
-
-        let products = defaultProducts; // Always use default, admin edits stored in session only
-        let branches = defaultBranches;
-        let businessInfo = JSON.parse(localStorage.getItem('Junis-chicken-info')) || defaultBusinessInfo;
+        let products = JSON.parse(JSON.stringify(defaultProducts));
+        let branches = JSON.parse(JSON.stringify(defaultBranches));
+        let businessInfo = JSON.parse(JSON.stringify(defaultBusinessInfo));
 
         function initSlider() {
             const container = document.getElementById('sliderContainer');
@@ -1777,7 +1768,7 @@
             saveSlider(); openSliderManager();
         }
 
-        function saveSlider() { localStorage.setItem('Junis-chicken-slider', JSON.stringify(sliderItems)); }
+        function saveSlider() { /* slider in memory */ }
 
         // =============================================
         // INIT
