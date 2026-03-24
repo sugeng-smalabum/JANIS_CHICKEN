@@ -329,6 +329,29 @@
             background: linear-gradient(135deg, var(--green-dark), var(--green-primary));
         }
 
+
+        /* Order Type Styles */
+        .order-type-btn {
+            flex: 1; padding: 8px 4px; border-radius: 10px; border: 2px solid var(--green-accent);
+            font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s ease;
+            background: white; color: var(--green-dark); text-align: center;
+        }
+        .order-type-btn.active-po { background: #3b82f6; border-color: #3b82f6; color: white; }
+        .order-type-btn.active-ot { background: var(--green-primary); border-color: var(--green-primary); color: white; }
+        .order-type-btn.active-fo { background: #ef4444; border-color: #ef4444; color: white; }
+        .order-type-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* DateTime picker */
+        .datetime-section { background: var(--green-pale); border: 2px solid var(--green-accent); border-radius: 12px; padding: 12px; margin-top: 10px; }
+        .datetime-section input, .datetime-section select {
+            width: 100%; padding: 6px 10px; border: 1.5px solid var(--green-accent);
+            border-radius: 8px; font-size: 0.8rem; font-weight: 600; color: var(--green-dark);
+            background: white; margin-top: 4px;
+        }
+        .order-type-badge {
+            display: inline-block; padding: 2px 10px; border-radius: 20px;
+            font-size: 0.7rem; font-weight: 800; letter-spacing: 0.5px;
+        }
         /* Nutrition badges */
         .nutrition-badge {
             display: inline-flex; align-items: center; gap: 6px;
@@ -657,7 +680,43 @@
             </div>
         </div>
 
-        <!-- Price Summary -->
+        <!-- Order Type Selection -->
+        <div class="border-t-2 pt-4 mb-3" style="border-color: var(--green-accent);">
+            <h4 class="font-bold mb-3 text-sm md:text-base" style="color: var(--green-dark);">🛍️ Order Type</h4>
+            <div class="flex gap-2 mb-3">
+                <button class="order-type-btn" id="btn-po" onclick="selectOrderType('PO')">
+                    📅 Pre Order<br><span style="font-size:0.65rem;font-weight:600;opacity:0.8;">-5 EGP</span>
+                </button>
+                <button class="order-type-btn active-ot" id="btn-ot" onclick="selectOrderType('OT')">
+                    ✅ On Time<br><span style="font-size:0.65rem;font-weight:600;opacity:0.8;">Normal Price</span>
+                </button>
+                <button class="order-type-btn" id="btn-fo" onclick="selectOrderType('FO')">
+                    ⚡ Flash Order<br><span style="font-size:0.65rem;font-weight:600;opacity:0.8;">+10 EGP</span>
+                </button>
+            </div>
+
+            <!-- Order Type Description -->
+            <div id="orderTypeDesc" class="p-2 rounded-lg text-xs mb-2" style="background: #e8f5ec; color: var(--green-dark); font-weight: 600;">
+                ✅ <strong>On Time (OT)</strong> — Normal price, delivery at your scheduled time
+            </div>
+
+            <!-- DateTime Picker -->
+            <div class="datetime-section">
+                <p class="text-xs font-bold mb-2" style="color: var(--green-dark);">📅 Schedule Your Order</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="text-xs font-semibold" style="color: var(--green-dark);">Date</label>
+                        <input type="date" id="orderDate" onchange="updateOrderSummary()">
+                    </div>
+                    <div>
+                        <label class="text-xs font-semibold" style="color: var(--green-dark);">Time</label>
+                        <input type="time" id="orderTime" onchange="updateOrderSummary()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Price Summary -->
         <div class="border-t-2 pt-4 mb-4 space-y-2 md:space-y-3" style="border-color: var(--green-accent);">
             <div class="flex justify-between items-center text-sm md:text-base">
                 <span class="text-gray-700">Product Price:</span>
@@ -666,6 +725,10 @@
             <div class="flex justify-between items-center text-sm md:text-base">
                 <span class="text-gray-700">Delivery Fee:</span>
                 <span class="font-bold" id="cartShippingCost" style="color: var(--green-primary);">EGP 0</span>
+            </div>
+            <div class="flex justify-between items-center text-sm md:text-base" id="orderAdjustRow" style="display:none!important;">
+                <span class="text-gray-700" id="orderAdjustLabel">Adjustment:</span>
+                <span class="font-bold" id="orderAdjustValue" style="color: #ef4444;">EGP 0</span>
             </div>
             <div class="border-t-2 pt-2 md:pt-3" style="border-color: var(--green-accent);">
                 <div class="flex justify-between items-center text-lg md:text-xl">
@@ -871,6 +934,8 @@
         let cartSelectedCity = '';
         let cartShippingCost = 0;
         let cartTotalWeight = 0;
+        let selectedOrderType = 'OT'; // PO, OT, FO
+        let orderAdjustment = 0;
         let userGPSCoords = null;
         const WEIGHT_PER_PACK = 0.5;
 
@@ -1630,7 +1695,7 @@
                 if (cityData) { cartShippingCost = cityData.baseCost + (cityData.perKg * cartTotalWeight); }
                 document.getElementById('totalWeightDisplay').textContent = `${cartTotalWeight} kg`;
             }
-            const total = subtotal + cartShippingCost;
+            const total = subtotal + cartShippingCost + orderAdjustment;
             document.getElementById('cartSubtotal').textContent = `EGP ${subtotal}`;
             document.getElementById('cartShippingCost').textContent = `EGP ${cartShippingCost}`;
             document.getElementById('cartTotal').textContent = `EGP ${total}`;
@@ -1645,26 +1710,126 @@
             document.getElementById('floatingCart').classList.add('hidden');
         }
 
+
+        // =============================================
+        // ORDER TYPE FUNCTIONS
+        // =============================================
+        function selectOrderType(type) {
+            selectedOrderType = type;
+
+            // Reset all buttons
+            document.getElementById('btn-po').className = 'order-type-btn';
+            document.getElementById('btn-ot').className = 'order-type-btn';
+            document.getElementById('btn-fo').className = 'order-type-btn';
+
+            const descEl = document.getElementById('orderTypeDesc');
+            const adjRow = document.getElementById('orderAdjustRow');
+            const adjLabel = document.getElementById('orderAdjustLabel');
+            const adjValue = document.getElementById('orderAdjustValue');
+
+            if (type === 'PO') {
+                document.getElementById('btn-po').className = 'order-type-btn active-po';
+                orderAdjustment = -5;
+                descEl.style.background = '#dbeafe';
+                descEl.style.color = '#1e40af';
+                descEl.innerHTML = '📅 <strong>Pre Order (PO)</strong> — Book in advance and get a 5 EGP discount!';
+                adjLabel.textContent = '🎁 PO Discount:';
+                adjValue.textContent = '- EGP 5';
+                adjValue.style.color = '#16a34a';
+                adjRow.style.display = 'flex';
+            } else if (type === 'OT') {
+                document.getElementById('btn-ot').className = 'order-type-btn active-ot';
+                orderAdjustment = 0;
+                descEl.style.background = '#e8f5ec';
+                descEl.style.color = '#2d5a3d';
+                descEl.innerHTML = '✅ <strong>On Time (OT)</strong> — Normal price, delivery at your scheduled time';
+                adjRow.style.display = 'none';
+            } else if (type === 'FO') {
+                document.getElementById('btn-fo').className = 'order-type-btn active-fo';
+                orderAdjustment = 10;
+                descEl.style.background = '#fee2e2';
+                descEl.style.color = '#991b1b';
+                descEl.innerHTML = '⚡ <strong>Flash Order (FO)</strong> — Urgent delivery, +10 EGP service fee';
+                adjLabel.textContent = '⚡ Flash Fee:';
+                adjValue.textContent = '+ EGP 10';
+                adjValue.style.color = '#ef4444';
+                adjRow.style.display = 'flex';
+            }
+
+            updateOrderSummary();
+        }
+
+        function updateOrderSummary() {
+            // Re-render cart to update total with adjustment
+            renderCartItems();
+        }
+
+        function getOrderDateTime() {
+            const date = document.getElementById('orderDate').value;
+            const time = document.getElementById('orderTime').value;
+            if (!date && !time) return null;
+            const dateObj = date ? new Date(date) : null;
+            const dayName = dateObj ? dateObj.toLocaleDateString('en-US', { weekday: 'long' }) : '';
+            const dateStr = dateObj ? dateObj.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+            return { date, time, dayName, dateStr };
+        }
+
+        // Set default date and time to today + 1 hour
+        function initOrderDateTime() {
+            const now = new Date();
+            now.setHours(now.getHours() + 1);
+            const dateStr = now.toISOString().split('T')[0];
+            const hours = String(now.getHours()).padStart(2, '0');
+            const mins = String(now.getMinutes()).padStart(2, '0');
+            document.getElementById('orderDate').value = dateStr;
+            document.getElementById('orderTime').value = `${hours}:${mins}`;
+        }
+
         function sendWhatsAppOrder() {
             if (cart.length === 0) {
                 Swal.fire({ title: '🛒 Cart Empty', text: 'Please add items first!', icon: 'warning', confirmButtonColor: '#4a7c59' });
                 return;
             }
+
+            const orderTypeLabels = { PO: '📅 Pre Order (PO)', OT: '✅ On Time (OT)', FO: '⚡ Flash Order (FO)' };
+            const dt = getOrderDateTime();
+
             let message = '*NEW ORDER - Junis Chicken 🐔*%0A%0A';
-            message += '*Order Items:*%0A';
+            message += `*Order Type:* ${orderTypeLabels[selectedOrderType]}%0A`;
+
+            if (dt && dt.date) {
+                message += `*Schedule:* ${dt.dayName}, ${dt.dateStr}`;
+                if (dt.time) message += ` at ${dt.time}`;
+                message += `%0A`;
+            }
+
+            message += `%0A*Order Items:*%0A`;
             cart.forEach(item => {
                 message += `• ${item.name} × ${item.qty} = EGP ${item.price * item.qty}%0A`;
             });
+
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const total = subtotal + cartShippingCost + orderAdjustment;
+
             message += `%0A*Subtotal:* EGP ${subtotal}%0A`;
+
             if (cartSelectedCity) {
                 message += `*Delivery to:* ${cartSelectedCity}, ${cartSelectedProvince}%0A`;
                 message += `*Delivery Fee:* EGP ${cartShippingCost}%0A`;
-                message += `*Total:* EGP ${subtotal + cartShippingCost}%0A`;
             }
+
+            if (selectedOrderType === 'PO') {
+                message += `*PO Discount:* - EGP 5%0A`;
+            } else if (selectedOrderType === 'FO') {
+                message += `*Flash Service Fee:* + EGP 10%0A`;
+            }
+
+            message += `%0A*TOTAL PAYMENT:* EGP ${total}%0A`;
+
             if (userGPSCoords) {
-                message += `%0A*My GPS Location:* ${userGPSCoords.lat.toFixed(4)}, ${userGPSCoords.lng.toFixed(4)}%0A`;
+                message += `%0A*GPS Location:* ${userGPSCoords.lat.toFixed(4)}, ${userGPSCoords.lng.toFixed(4)}%0A`;
             }
+
             message += '%0AThank you! 🙏';
             window.open(`https://wa.me/201505327042?text=${message}`, '_blank');
         }
@@ -1781,6 +1946,7 @@
             initSlider();
             initShippingCalculator();
             initCartShipping();
+            initOrderDateTime();
 
             // Show GPS popup on load
             setTimeout(() => {
