@@ -1694,8 +1694,8 @@
             localStorage.setItem('Junis-chicken-version', DATA_VERSION);
         }
 
-        let products = JSON.parse(localStorage.getItem('Junis-chicken-products')) || defaultProducts;
-        let branches = JSON.parse(localStorage.getItem('Junis-chicken-branches')) || defaultBranches;
+        let products = defaultProducts; // Always use default, admin edits stored in session only
+        let branches = defaultBranches;
         let businessInfo = JSON.parse(localStorage.getItem('Junis-chicken-info')) || defaultBusinessInfo;
 
         function initSlider() {
