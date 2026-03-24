@@ -420,7 +420,6 @@
                     <select id="productCategory" class="w-full px-4 py-2 border-2 rounded-lg" style="border-color: var(--green-accent);">
                         <option value="signature">Signature Menu</option>
                         <option value="sides">Side Dishes</option>
-                        <option value="best">Best Recommendation</option>
                     </select>
                 </div>
             </div>
@@ -488,7 +487,7 @@
 
                 <div class="header-content">
                     <div class="logo-container">
-                        <img src="logo.png" alt="Junis Chicken Logo" class="w-36 h-36 md:w-44 md:h-44 object-contain rounded-2xl shadow-2xl bg-white/10 backdrop-blur-sm p-2">
+                        <img src="<logo.png" alt="Junis Chicken Logo" class="w-36 h-36 md:w-44 md:h-44 object-contain rounded-2xl shadow-2xl bg-white/10 backdrop-blur-sm p-2">
                     </div>
                     <div class="title-animated">
                         <h1 class="text-5xl md:text-7xl font-bold mb-3">
@@ -558,18 +557,6 @@
     <!-- ===================== MAIN CONTENT ===================== -->
     <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
 
-        <!-- Best Recommendation Menu -->
-        <div class="mb-16">
-            <div class="flex items-center justify-between mb-8">
-                <div class="flex items-center gap-3">
-                    <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
-                    <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🍗 Best Recommendation Menu</h2>
-                </div>
-                <button id="addProductBtn1" onclick="openAddProduct('best')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
-            </div>
-            <div id="BestProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        </div>
-
         <!-- Signature Menu -->
         <div class="mb-16">
             <div class="flex items-center justify-between mb-8">
@@ -577,7 +564,7 @@
                     <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
                     <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🍗 Signature Menu</h2>
                 </div>
-                <button id="addProductBtn2" onclick="openAddProduct('signature')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+                <button id="addProductBtn1" onclick="openAddProduct('signature')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
             </div>
             <div id="signatureProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
@@ -589,11 +576,10 @@
                     <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-light), var(--gold));"></div>
                     <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🥗 Side Dishes</h2>
                 </div>
-                <button id="addProductBtn3" onclick="openAddProduct('sides')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+                <button id="addProductBtn2" onclick="openAddProduct('sides')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
             </div>
             <div id="bakeryProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
-
         <!-- Branches -->
         <div>
             <div class="flex items-center justify-between mb-8">
@@ -893,50 +879,61 @@
         // =============================================
         const defaultProducts = [
             {
-                id: 2, name: 'Grilled Chicken Breast', price: 89,
-                image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400',
+                id: 1, name: 'Breast Grilled Mashed Potatoes', price: 85,
+                image: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400',
                 description: 'Juicy grilled chicken breast — high protein, low fat, seasoned to perfection',
                 category: 'signature'
             },
             {
-                id: 3, name: 'Crispy Chicken', price: 79,
-                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400',
-                description: 'Golden crispy chicken with a crunchy coating — irresistibly delicious',
+                id: 2, name: 'Thigh Grilled Mashed Potatoes', price: 85,
+                image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400',
+                description: 'Succulent grilled chicken thigh served with creamy mashed potato',
                 category: 'signature'
             },
             {
-                id: 4, name: 'Chicken & Mashed Potato Combo', price: 119,
-                image: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400',
-                description: 'Grilled chicken breast + creamy mashed potato — the perfect healthy combo',
-                category: 'signature'
-            },
-            {
-                id: 5, name: 'Healthy Chicken Bowl', price: 99,
+                id: 3, name: 'Breast Grilled Rice', price: 85,
                 image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400',
-                description: 'Chicken + steamed vegetables + mashed potato — balanced nutrition in one bowl',
+                description: 'Grilled chicken breast served with steamed white rice — balanced and filling',
                 category: 'signature'
             },
             {
-                id: 6, name: 'Steamed Veggie Platter', price: 55,
+                id: 4, name: 'Thigh Grilled Rice', price: 85,
                 image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
-                description: 'Assorted steamed vegetables rich in fiber and vitamins',
+                description: 'Grilled chicken thigh served with steamed white rice — hearty and nutritious',
+                category: 'signature'
+            },
+            {
+                id: 5, name: 'Ayam Kecap', price: 75,
+                image: 'https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=400',
+                description: 'Tender chicken braised in sweet soy sauce — rich and aromatic',
                 category: 'sides'
             },
             {
-                id: 7, name: 'Creamy Mashed Potato', price: 45,
-                image: 'https://images.unsplash.com/photo-1635321593217-40050ad13c74?w=400',
-                description: 'Smooth and creamy mashed potato — comfort food at its finest',
+                id: 6, name: 'Ayam Geprek', price: 75,
+                image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400',
+                description: 'Crispy fried chicken smashed with spicy sambal — bold, fiery and satisfying',
                 category: 'sides'
             },
             {
-                id: 1, name: 'Ayam Geprek', price: 75 le,
-                image: 'best.jpeg',
-                description: 'Makanan ter Debest Indonesia kini ada di Mesir Cuy',
-                category: 'best'
+                id: 7, name: 'Ayam Crispy', price: 75,
+                image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400',
+                description: 'Golden crispy fried chicken with a perfectly crunchy coating',
+                category: 'sides'
+            },
+            {
+                id: 8, name: 'Sop Ayam', price: 75,
+                image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400',
+                description: 'Comforting clear chicken soup with vegetables — light and nourishing',
+                category: 'sides'
+            },
+            {
+                id: 9, name: 'Chicken Katsu', price: 85,
+                image: 'https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400',
+                description: 'Japanese-style breaded chicken cutlet served with tonkatsu sauce',
+                category: 'sides'
             }
-         
-        ];
 
+        ];
         const defaultBranches = [
             { id: 1, name: 'Junis Chicken Cairo - Nasr City', address: 'Nasr City, Cairo, Egypt', phone: '+20 15 05327042', hours: '09:00 - 22:00' },
             { id: 2, name: 'Junis Chicken Giza', address: 'Mohandessin, Giza, Egypt', phone: '+20 15 53184842', hours: '09:00 - 22:00' }
@@ -1409,14 +1406,15 @@
                 Swal.fire({ title: 'Incomplete', text: 'Please fill name and price!', icon: 'warning', confirmButtonColor: '#4a7c59' });
                 return;
             }
-            if (isAddingNew) {
-                const newId = Math.max(...products.map(p => p.id), 0) + 1;
-                products.push({ id: newId, name, price, image: image || 'https://via.placeholder.com/400x300', description, category });
-            } else {
-                const idx = products.findIndex(p => p.id === currentEditProduct);
-                if (idx > -1) products[idx] = { ...products[idx], name, price, image: image || products[idx].image, description, category };
-            }
-            localStorage.setItem('Junis-chicken-products', JSON.stringify(products));
+            
+                if (isAddingNew) {
+                    const newId = Math.max(...products.map(p => p.id), 0) + 1;
+                    products.push({ id: newId, name, price, image: image || 'https://via.placeholder.com/400x300', description, category });
+                } else {
+                    const idx = products.findIndex(p => p.id === currentEditProduct);
+                    if (idx > -1) products[idx] = { ...products[idx], name, price, image: image || products[idx].image, description, category };
+                }
+            localStorage.setItem(\'Junis-chicken-products\', JSON.stringify(products));
             closeProductModal(); renderProducts();
         }
 
@@ -1429,7 +1427,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     products = products.filter(p => p.id !== id);
-                    localStorage.setItem('Junis-chicken-products', JSON.stringify(products));
+                        localStorage.setItem('Junis-chicken-products', JSON.stringify(products));
                     renderProducts();
                 }
             });
@@ -1438,8 +1436,9 @@
         function renderProducts() {
             const sigContainer = document.getElementById('signatureProducts');
             const sideContainer = document.getElementById('bakeryProducts');
-            sigContainer.innerHTML = ''; sideContainer.innerHTML = '';
-            products.forEach(product => {
+                        sigContainer.innerHTML = ''; sideContainer.innerHTML = '';
+            const allProducts = [...products];
+            allProducts.forEach(product => {
                 const card = createProductCard(product);
                 if (product.category === 'signature') sigContainer.appendChild(card);
                 else sideContainer.appendChild(card);
@@ -1686,7 +1685,7 @@
         let sliderAutoPlay = true;
         let sliderInterval = null;
 
-        const DATA_VERSION = document.lastModified || '20032026';
+        const DATA_VERSION = '24032026-v2';
         if (localStorage.getItem('Junis-chicken-version') !== DATA_VERSION) {
             localStorage.removeItem('Junis-chicken-products');
             localStorage.removeItem('Junis-chicken-branches');
