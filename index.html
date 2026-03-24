@@ -557,6 +557,18 @@
     <!-- ===================== MAIN CONTENT ===================== -->
     <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
 
+        <!-- Best Recommendation Menu -->
+        <div class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🍗 Signature Menu</h2>
+                </div>
+                <button id="addProductBtn1" onclick="openAddProduct('best')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+            </div>
+            <div id="signatureProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+
         <!-- Signature Menu -->
         <div class="mb-16">
             <div class="flex items-center justify-between mb-8">
@@ -564,7 +576,7 @@
                     <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-primary), var(--green-light));"></div>
                     <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🍗 Signature Menu</h2>
                 </div>
-                <button id="addProductBtn1" onclick="openAddProduct('signature')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+                <button id="addProductBtn2" onclick="openAddProduct('signature')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
             </div>
             <div id="signatureProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
@@ -576,7 +588,7 @@
                     <div class="h-1 w-12 rounded" style="background: linear-gradient(to right, var(--green-light), var(--gold));"></div>
                     <h2 class="text-3xl md:text-4xl font-bold" style="color: var(--green-dark);">🥗 Side Dishes</h2>
                 </div>
-                <button id="addProductBtn2" onclick="openAddProduct('sides')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
+                <button id="addProductBtn3" onclick="openAddProduct('sides')" class="hidden text-white px-4 py-2 rounded-lg btn-green">➕ Add Product</button>
             </div>
             <div id="bakeryProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
