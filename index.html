@@ -76,7 +76,7 @@
                 "servesCuisine": "Healthy Chicken",
                 "address": {
                     "@type": "PostalAddress",
-                    "addressLocality": "Cairo",
+                    "addressLocality": "Gamaliyah, Darrasah, Cairo",
                     "addressRegion": "Cairo Governorate",
                     "addressCountry": "EG"
                 },
@@ -536,7 +536,7 @@
                         <span>🕐</span><span>Open 09:00 - 22:00</span>
                     </div>
                     <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
-                        <span>📍</span><span>Egypt 🇪🇬</span>
+                        <span>📍</span><span>Gamaliyah, Cairo 🇪🇬</span>
                     </div>
                     <div class="flex items-center gap-2 green-badge px-4 py-2 rounded-full">
                         <span>🚚</span><span>Delivery Across Egypt</span>
@@ -894,7 +894,7 @@
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <div class="space-y-2 text-gray-300">
                         <p>📞 +201505327042</p>
-                        <p>📍 Cairo, Egypt 🇪🇬</p>
+                        <p>📍 Gamaliyah, Darrasah, Cairo, Egypt 🇪🇬</p>
                         <p>🌐 Junischicken.com</p>
                     </div>
                 </div>
@@ -1000,7 +1000,7 @@
 
         ];
         const defaultBranches = [
-            { id: 1, name: 'Junis Chicken Cairo - Nasr City', address: 'Nasr City, Cairo, Egypt', phone: '+20 15 05327042', hours: '09:00 - 22:00' },
+            { id: 1, name: '🏢 Junis Chicken HQ - Gamaliyah', address: 'Gamaliyah, Darrosah, Banque Misr, Cairo, Egypt', phone: '+20 15 05327042', hours: '09:00 - 22:00' },
             { id: 2, name: 'Junis Chicken Giza', address: 'Mohandessin, Giza, Egypt', phone: '+20 15 53184842', hours: '09:00 - 22:00' }
         ];
 
@@ -1015,81 +1015,82 @@
         // =============================================
         const shippingRates = {
             "Cairo": {
-                "Nasr City": { baseCost: 20, perKg: 5, estimate: "Same Day" },
-                "Heliopolis": { baseCost: 20, perKg: 5, estimate: "Same Day" },
-                "Maadi": { baseCost: 25, perKg: 5, estimate: "Same Day" },
-                "Downtown Cairo": { baseCost: 25, perKg: 5, estimate: "Same Day" },
-                "Zamalek": { baseCost: 25, perKg: 5, estimate: "Same Day" },
-                "New Cairo": { baseCost: 30, perKg: 6, estimate: "Same Day" },
-                "6th of October": { baseCost: 35, perKg: 6, estimate: "1 Day" }
+                "Gamaliyah":      { baseCost: 20, perKg: 4, estimate: "Same Day (1-2h)" },
+                "Downtown Cairo": { baseCost: 20, perKg: 4, estimate: "Same Day (1-2h)" },
+                "Zamalek":        { baseCost: 20, perKg: 4, estimate: "Same Day (1-2h)" },
+                "Nasr City":      { baseCost: 25, perKg: 5, estimate: "Same Day (2-3h)" },
+                "Heliopolis":     { baseCost: 25, perKg: 5, estimate: "Same Day (2-3h)" },
+                "Maadi":          { baseCost: 25, perKg: 5, estimate: "Same Day (2-3h)" },
+                "New Cairo":      { baseCost: 35, perKg: 6, estimate: "Same Day / 1 Day" },
+                "6th of October": { baseCost: 50, perKg: 7, estimate: "1-2 Days" }
             },
             "Giza": {
-                "Mohandessin": { baseCost: 25, perKg: 5, estimate: "Same Day" },
-                "Dokki": { baseCost: 25, perKg: 5, estimate: "Same Day" },
-                "Haram": { baseCost: 30, perKg: 6, estimate: "1 Day" },
-                "Sheikh Zayed": { baseCost: 35, perKg: 6, estimate: "1 Day" }
+                "Mohandessin":  { baseCost: 25, perKg: 5, estimate: "Same Day (2-3h)" },
+                "Dokki":        { baseCost: 25, perKg: 5, estimate: "Same Day (2-3h)" },
+                "Haram":        { baseCost: 35, perKg: 6, estimate: "Same Day / 1 Day" },
+                "Sheikh Zayed": { baseCost: 50, perKg: 7, estimate: "1-2 Days" }
             },
             "Alexandria": {
-                "Alexandria City": { baseCost: 50, perKg: 8, estimate: "1-2 Days" },
-                "Smouha": { baseCost: 50, perKg: 8, estimate: "1-2 Days" },
-                "Miami": { baseCost: 55, perKg: 9, estimate: "1-2 Days" },
-                "Agami": { baseCost: 55, perKg: 9, estimate: "2 Days" }
+                "Alexandria City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" },
+                "Smouha":          { baseCost: 90, perKg: 12, estimate: "3-4 Days" },
+                "Miami":           { baseCost: 90, perKg: 12, estimate: "3-4 Days" },
+                "Agami":           { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Sharm El Sheikh": {
-                "Sharm City": { baseCost: 80, perKg: 12, estimate: "2-3 Days" },
-                "Naama Bay": { baseCost: 80, perKg: 12, estimate: "2-3 Days" }
+                "Sharm City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" },
+                "Naama Bay":  { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Hurghada": {
-                "Hurghada City": { baseCost: 75, perKg: 11, estimate: "2-3 Days" },
-                "El Dahar": { baseCost: 75, perKg: 11, estimate: "2-3 Days" }
+                "Hurghada City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" },
+                "El Dahar":      { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Luxor": {
-                "Luxor City": { baseCost: 90, perKg: 14, estimate: "2-3 Days" },
-                "East Bank": { baseCost: 90, perKg: 14, estimate: "2-3 Days" }
+                "Luxor City": { baseCost: 130, perKg: 15, estimate: "4-5 Days" },
+                "East Bank":  { baseCost: 130, perKg: 15, estimate: "4-5 Days" }
             },
             "Aswan": {
-                "Aswan City": { baseCost: 100, perKg: 15, estimate: "3 Days" },
-                "Corniche": { baseCost: 100, perKg: 15, estimate: "3 Days" }
+                "Aswan City": { baseCost: 130, perKg: 15, estimate: "4-5 Days" },
+                "Corniche":   { baseCost: 130, perKg: 15, estimate: "4-5 Days" }
             },
             "Suez": {
-                "Suez City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+                "Suez City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Mansoura": {
-                "Mansoura City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" },
-                "Mit Ghamr": { baseCost: 60, perKg: 10, estimate: "2 Days" }
+                "Mansoura City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" },
+                "Mit Ghamr":     { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Tanta": {
-                "Tanta City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" }
+                "Tanta City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Zagazig": {
-                "Zagazig City": { baseCost: 55, perKg: 9, estimate: "1-2 Days" }
+                "Zagazig City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Ismailia": {
-                "Ismailia City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+                "Ismailia City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Port Said": {
-                "Port Said City": { baseCost: 65, perKg: 10, estimate: "2 Days" }
+                "Port Said City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Damietta": {
-                "Damietta City": { baseCost: 65, perKg: 10, estimate: "2 Days" }
+                "Damietta City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Fayoum": {
-                "Fayoum City": { baseCost: 60, perKg: 10, estimate: "1-2 Days" }
+                "Fayoum City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Beni Suef": {
-                "Beni Suef City": { baseCost: 65, perKg: 11, estimate: "2 Days" }
+                "Beni Suef City": { baseCost: 65, perKg: 8, estimate: "2-3 Days" }
             },
             "Minya": {
-                "Minya City": { baseCost: 75, perKg: 12, estimate: "2-3 Days" }
+                "Minya City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Asyut": {
-                "Asyut City": { baseCost: 85, perKg: 13, estimate: "2-3 Days" }
+                "Asyut City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Sohag": {
-                "Sohag City": { baseCost: 90, perKg: 14, estimate: "3 Days" }
+                "Sohag City": { baseCost: 90, perKg: 12, estimate: "3-4 Days" }
             },
             "Qena": {
-                "Qena City": { baseCost: 90, perKg: 14, estimate: "3 Days" }
+                "Qena City": { baseCost: 130, perKg: 15, estimate: "4-5 Days" }
             }
         };
 
@@ -1729,12 +1730,12 @@
 
             if (type === 'PO') {
                 document.getElementById('btn-po').className = 'order-type-btn active-po';
-                orderAdjustment = -5;
+                orderAdjustment = -7;
                 descEl.style.background = '#dbeafe';
                 descEl.style.color = '#1e40af';
-                descEl.innerHTML = '📅 <strong>Pre Order (PO)</strong> — Book in advance and get a 5 EGP discount!';
+                descEl.innerHTML = '📅 <strong>Pre Order (PO)</strong> — Book in advance and get a 7 EGP discount!';
                 adjLabel.textContent = '🎁 PO Discount:';
-                adjValue.textContent = '- EGP 5';
+                adjValue.textContent = '- EGP 7';
                 adjValue.style.color = '#16a34a';
                 adjRow.style.display = 'flex';
             } else if (type === 'OT') {
