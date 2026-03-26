@@ -1786,6 +1786,31 @@
             document.getElementById('orderTime').value = `${hours}:${mins}`;
         }
 
+
+        // =============================================
+        // GOOGLE SHEETS INTEGRATION
+        // =============================================
+        // PASTE URL Google Apps Script kamu di sini setelah deploy:
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyQaHD_jirBi-YJ46xlcGi4qB6Js2SYSZ7QOb6IXdsxKN5X-VJqX6-SRs9B_Pkk9s_s/exec';
+
+        async function saveOrderToSheets(orderData) {
+            if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                console.warn('Google Script URL belum diset. Order tidak tersimpan ke Sheets.');
+                return;
+            }
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                });
+                console.log('✅ Order tersimpan ke Google Sheets!');
+            } catch (err) {
+                console.error('❌ Gagal simpan ke Sheets:', err);
+            }
+        }
+
         function sendWhatsAppOrder() {
             if (cart.length === 0) {
                 Swal.fire({ title: '🛒 Cart Empty', text: 'Please add items first!', icon: 'warning', confirmButtonColor: '#4a7c59' });
@@ -1794,7 +1819,10 @@
 
             const orderTypeLabels = { PO: '📅 Pre Order (PO)', OT: '✅ On Time (OT)', FO: '⚡ Flash Order (FO)' };
             const dt = getOrderDateTime();
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const total = subtotal + cartShippingCost + orderAdjustment;
 
+            // ── Build WhatsApp message ──
             let message = '*NEW ORDER - Junis Chicken 🐔*%0A%0A';
             message += `*Order Type:* ${orderTypeLabels[selectedOrderType]}%0A`;
 
@@ -1809,9 +1837,6 @@
                 message += `• ${item.name} × ${item.qty} = EGP ${item.price * item.qty}%0A`;
             });
 
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const total = subtotal + cartShippingCost + orderAdjustment;
-
             message += `%0A*Subtotal:* EGP ${subtotal}%0A`;
 
             if (cartSelectedCity) {
@@ -1820,9 +1845,9 @@
             }
 
             if (selectedOrderType === 'PO') {
-                message += `*PO Discount:* - EGP 5%0A`;
+                message += `*PO Discount:* - EGP ${Math.abs(orderAdjustment)}%0A`;
             } else if (selectedOrderType === 'FO') {
-                message += `*Flash Service Fee:* + EGP 10%0A`;
+                message += `*Flash Service Fee:* + EGP ${orderAdjustment}%0A`;
             }
 
             message += `%0A*TOTAL PAYMENT:* EGP ${total}%0A`;
@@ -1832,6 +1857,32 @@
             }
 
             message += '%0AThank you! 🙏';
+
+            // ── Save to Google Sheets ──
+            const orderData = {
+                orderType: selectedOrderType,
+                orderTypeLabel: orderTypeLabels[selectedOrderType],
+                scheduleDate: dt ? dt.dateStr : '',
+                scheduleTime: dt ? dt.time : '',
+                items: cart.map(item => ({
+                    name: item.name,
+                    qty: item.qty,
+                    price: item.price,
+                    subtotal: item.price * item.qty
+                })),
+                subtotal: subtotal,
+                shippingCost: cartShippingCost,
+                adjustment: orderAdjustment,
+                total: total,
+                deliveryCity: cartSelectedCity || '',
+                deliveryProvince: cartSelectedProvince || '',
+                gpsLocation: userGPSCoords ? `${userGPSCoords.lat.toFixed(4)}, ${userGPSCoords.lng.toFixed(4)}` : ''
+            };
+
+            // Save silently in background
+            saveOrderToSheets(orderData);
+
+            // Open WhatsApp
             window.open(`https://wa.me/201505327042?text=${message}`, '_blank');
         }
 
